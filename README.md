@@ -4,7 +4,13 @@
 
 Oh no! Little monsters have stolen your classmate's computer! Unfortunately, they were just in the middle of uploading their final project, and if they can't get that computer back, they'll fail the class! You play as a quiet bunny in this single-level arcade platformer shooter as you dodge traps and shoot monsters to get their laptop back.
 
-Built primarily for the HTML5 platform in GameMaker Studio 1.4. I conceived the idea last summer and worked on it from May 2017 to August 2017, and I started to work on it again from June 2018 to August 2018, with the goal of finishing it before the end of August. (2017-2018)
+## Development
+
+Project Pursuit is built primarily for the HTML5 platform in GameMaker Studio 1.4. 
+
+This is actually a refactoring of an older unfinished project, and you can see that project at its Github repo [here](https://github.com/ctrinh98/Project-BUN.gmx). I conceived the idea last summer and worked on it from May 2017 to August 2017 before taking a break during the 2017-2018 school year. I started to work on it again from June 2018 to August 2018, and due to major inoptimizations with the original build, I decided to refactor it into a new project with much of the same code. 
+
+The goal is to finish and release Project Pursuit before the end of August. (2017-2018)
 
 ## Release
 As of July 15th, 2018, there is a projected release date of August 2018. It'll be released on itch.io as an HTML5 game first.
