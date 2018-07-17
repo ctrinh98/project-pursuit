@@ -139,7 +139,16 @@
     <script>scripts\EnemyExit.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_playerb</object>
+    <objects name="obj_fundamental">
+      <object>objects\obj_game</object>
+      <object>objects\obj_player</object>
+      <object>objects\obj_test_controller</object>
+      <object>objects\obj_collision</object>
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_spikes</object>
+      <object>objects\obj_camera</object>
+      <object>objects\obj_camera_skip_intro</object>
+    </objects>
     <objects name="obj_collision">
       <object>objects\obj_wall</object>
       <object>objects\obj_collide_ceiling</object>
@@ -157,22 +166,6 @@
       <object>objects\obj_water_slope_w</object>
       <object>objects\obj_water_w</object>
     </objects>
-    <object>objects\obj_player</object>
-    <object>objects\obj_game</object>
-    <object>objects\obj_test_controller</object>
-    <object>objects\obj_camera_skip_intro</object>
-    <object>objects\obj_collision</object>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_spikes</object>
-    <object>objects\obj_machine_bullet</object>
-    <object>objects\obj_bullet</object>
-    <object>objects\obj_bullet_fire</object>
-    <object>objects\obj_bullet_collide</object>
-    <object>objects\obj_machine_empty</object>
-    <object>objects\obj_gameover_start</object>
-    <object>objects\obj_gameover_end</object>
-    <object>objects\obj_player_collapse</object>
-    <object>objects\obj_camera</object>
     <objects name="obj_enemy">
       <object>objects\obj_bat_red</object>
       <object>objects\obj_critter_red</object>
@@ -183,10 +176,19 @@
       <object>objects\obj_sprites_w</object>
       <object>objects\obj_battery_large</object>
       <object>objects\obj_battery_medium</object>
-      <object>objects\obj_battery_small</object>
       <object>objects\obj_big_explosion</object>
+      <object>objects\obj_battery_small</object>
       <object>objects\obj_enemy_damage</object>
     </objects>
+    <object>objects\obj_playerb</object>
+    <object>objects\obj_machine_bullet</object>
+    <object>objects\obj_bullet</object>
+    <object>objects\obj_bullet_fire</object>
+    <object>objects\obj_bullet_collide</object>
+    <object>objects\obj_machine_empty</object>
+    <object>objects\obj_gameover_start</object>
+    <object>objects\obj_gameover_end</object>
+    <object>objects\obj_player_collapse</object>
     <object>objects\obj_spur_a</object>
     <object>objects\obj_spur_b</object>
     <object>objects\obj_spur_c</object>
@@ -195,9 +197,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
     <room>rooms\rm_last_cave</room>
     <room>rooms\rm_last_cave_old</room>
-    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

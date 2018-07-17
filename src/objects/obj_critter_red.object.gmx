@@ -92,210 +92,210 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
             <kind>1</kind>
             <string>if (global.pause) {
 
-EnemyExit();
+    EnemyExit();
 
 } else {
 
-//Face the player's direction
-x_direction = sign(x - obj_player.x | 1);
-
-if (distance_to_object(obj_player) &lt; 85) {
-    rest = false;
-    attack = true;
-} else {
-    rest = true;
-    attack = false;
-    if (place_meeting(x,y+1,obj_collision)) {
-        image_index = 0;
-        hspd = 0;
-    }
-}
-
-if (attack == true) {
-
-    if (place_meeting(x, y+1, obj_collision) || place_meeting(xprevious, yprevious+1, obj_collision)) {
-        hspd = 0;
-        vspd = 0;
-        if (t_ground &gt; 0) {
+    //Face the player's direction
+    x_direction = sign(x - obj_player.x | 1);
+    
+    if (distance_to_object(obj_player) &lt; 85) {
+        rest = false;
+        attack = true;
+    } else {
+        rest = true;
+        attack = false;
+        if (place_meeting(x,y+1,obj_collision)) {
             image_index = 0;
-            t_ground -= 1;
-        } else if (t_ground &lt;= 0) {
-            image_index = 2;
-            t_ground = 10;
-            audio_play_sound(snd_critter_jump,5,false);
-            grav = 0.07;
-            hspd = x_direction * -0.5;
-            jump_rise = true;
-            vspd = -3.2;
-            grounded = true;
+            hspd = 0;
         }
-    } else {
-        grounded = false;
-        if (vspd &gt; 0) {
-            grav = 0.1;
-        }
-        if (vspd &lt; 10) {
-            vspd += grav;
-        }
-    }
-}
-        
-/*
-//Wake up when player is near
-if (distance_to_object(obj_player) &lt; 40 &amp;&amp; grounded == true) {
-    if (vspd == 0) {
-        image_index = 0;
-    } else {
-        image_index = 2;
-    }
-    hspd = (image_angle) * spd;
-    vspd = -jspd;
-} else if (40 &lt; distance_to_object(obj_player) &amp;&amp; distance_to_object(obj_player) &lt; 60) {
-    image_index = 1;
-    hspd = 0;
-    vspd = 0;
-} else if (distance_to_object(obj_player)) &gt; 40 {
-    image_index = 0;
-    hspd = 0;
-    vspd = 0;
-}*/
-
-//Gravity
-if (vspd &lt; 10) {
-    vspd += grav;
-}
-
-if (place_meeting(x, y+1, obj_collision) || place_meeting(xprevious, yprevious+1, obj_collision)) {
-    grounded = true;
-} else {
-    grounded = false;
-}
-
-var yslope = 0;
-
-// Move down a slope
-if (!place_meeting(x+hspd, y, obj_collision) &amp;&amp; abs(hspd) &gt; 0 &amp;&amp; place_meeting(x, y+1, obj_collision)) {
-    while (!place_meeting(x+hspd, y-yslope, obj_collision) &amp;&amp; yslope &gt;= -abs(hspd)) {
-        yslope--;
     }
     
-    // Make sure we actually need to move down
-    if (yslope != 0 &amp;&amp; place_meeting(x+hspd, y-yslope+1, obj_collision)) {
-        y -= yslope;
+    if (attack == true) {
+    
+        if (place_meeting(x, y+1, obj_collision) || place_meeting(xprevious, yprevious+1, obj_collision)) {
+            hspd = 0;
+            vspd = 0;
+            if (t_ground &gt; 0) {
+                image_index = 0;
+                t_ground -= 1;
+            } else if (t_ground &lt;= 0) {
+                image_index = 2;
+                t_ground = 10;
+                audio_play_sound(snd_critter_jump,5,false);
+                grav = 0.07;
+                hspd = x_direction * -0.5;
+                jump_rise = true;
+                vspd = -3.2;
+                grounded = true;
+            }
+        } else {
+            grounded = false;
+            if (vspd &gt; 0) {
+                grav = 0.1;
+            }
+            if (vspd &lt; 10) {
+                vspd += grav;
+            }
+        }
     }
-}
-
-// Horizontal check
-if (place_meeting(x+hspd, y, obj_collision)) {
-    yplus = 0;
-    while (place_meeting(x+hspd,y-yplus,obj_collision) &amp;&amp; yplus &lt;= abs(1*hspd)) yplus += 1;
-    if place_meeting(x+hspd,y-yplus,obj_collision) {
-        while (!place_meeting(x+sign(hspd),y,obj_collision)) x+=sign(hspd);
+            
+    /*
+    //Wake up when player is near
+    if (distance_to_object(obj_player) &lt; 40 &amp;&amp; grounded == true) {
+        if (vspd == 0) {
+            image_index = 0;
+        } else {
+            image_index = 2;
+        }
+        hspd = (image_angle) * spd;
+        vspd = -jspd;
+    } else if (40 &lt; distance_to_object(obj_player) &amp;&amp; distance_to_object(obj_player) &lt; 60) {
+        image_index = 1;
         hspd = 0;
+        vspd = 0;
+    } else if (distance_to_object(obj_player)) &gt; 40 {
+        image_index = 0;
+        hspd = 0;
+        vspd = 0;
+    }*/
+    
+    //Gravity
+    if (vspd &lt; 10) {
+        vspd += grav;
+    }
+    
+    if (place_meeting(x, y+1, obj_collision) || place_meeting(xprevious, yprevious+1, obj_collision)) {
+        grounded = true;
     } else {
-        y -= yplus
+        grounded = false;
     }
-}
-
-//Move horizontally
-//if (!place_meeting(x+hspd, y, obj_collision)) {
-    x += hspd;
-//}
-
-//Vertical collisions
-if (place_meeting(x, y+vspd, obj_collision)) {
-    while (!place_meeting(x, y+sign(vspd), obj_collision)) {
-        y+= sign(vspd);
-    }
-    vspd = 0;
-}
-
-//Move vertically
-y += vspd;
-
-//Look for a projectile
-incoming_bullet = instance_place(x,y,obj_bullet);
-
-if (instance_exists(incoming_bullet) &amp;&amp; enemy_hp &gt; 2) {
-    wobbling = true;
-    with incoming_bullet { 
-        instance_destroy(); 
-    }
-    audio_play_sound(snd_critter_damage,5,false);
-    instance_create(x,y,obj_enemy_damage);
-    instance_create(x,y,obj_enemy_damage);
-    instance_create(x,y,obj_enemy_damage);
-    enemy_hp -= 2;
+    
+    var yslope = 0;
+    
+    // Move down a slope
+    if (!place_meeting(x+hspd, y, obj_collision) &amp;&amp; abs(hspd) &gt; 0 &amp;&amp; place_meeting(x, y+1, obj_collision)) {
+        while (!place_meeting(x+hspd, y-yslope, obj_collision) &amp;&amp; yslope &gt;= -abs(hspd)) {
+            yslope--;
+        }
         
-} else if (instance_exists(incoming_bullet) &amp;&amp; enemy_hp == 2) {
-    with incoming_bullet { 
-        instance_destroy(); 
+        // Make sure we actually need to move down
+        if (yslope != 0 &amp;&amp; place_meeting(x+hspd, y-yslope+1, obj_collision)) {
+            y -= yslope;
+        }
     }
-    audio_play_sound(snd_enemy_explode,5,false);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_battery_small);
-    instance_create(x,y,obj_battery_small);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_big_explosion);
-    instance_destroy();
-}
-
-//Look for a spur
-incoming_spur = instance_place(x,y,obj_spur_a);
-
-if (instance_exists(incoming_spur) &amp;&amp; enemy_hp &gt; 1) {
-    wobbling = true;
-    with incoming_spur { 
-        contact = true; 
+    
+    // Horizontal check
+    if (place_meeting(x+hspd, y, obj_collision)) {
+        yplus = 0;
+        while (place_meeting(x+hspd,y-yplus,obj_collision) &amp;&amp; yplus &lt;= abs(1*hspd)) yplus += 1;
+        if place_meeting(x+hspd,y-yplus,obj_collision) {
+            while (!place_meeting(x+sign(hspd),y,obj_collision)) x+=sign(hspd);
+            hspd = 0;
+        } else {
+            y -= yplus
+        }
     }
-    audio_play_sound(snd_critter_damage,5,false);
-    instance_create(x,y,obj_enemy_damage);
-    instance_create(x,y,obj_enemy_damage);
-    instance_create(x,y,obj_enemy_damage);
-    enemy_hp -= 1;
-        
-} else if (instance_exists(incoming_spur) &amp;&amp; enemy_hp == 1) {
-    with incoming_spur { 
-        contact = true; 
+    
+    //Move horizontally
+    //if (!place_meeting(x+hspd, y, obj_collision)) {
+        x += hspd;
+    //}
+    
+    //Vertical collisions
+    if (place_meeting(x, y+vspd, obj_collision)) {
+        while (!place_meeting(x, y+sign(vspd), obj_collision)) {
+            y+= sign(vspd);
+        }
+        vspd = 0;
     }
-    audio_play_sound(snd_enemy_explode,5,false);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_battery_small);
-    instance_create(x,y,obj_battery_small);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_big_explosion);
-    instance_destroy();
-}
-
-//Look for a projectile
-incoming_explosion = instance_place(x,y,obj_player_death);
-
-if (instance_exists(incoming_explosion) &amp;&amp; enemy_hp &gt; 1) {
-    wobbling = true;
-    with incoming_explosion { 
-        instance_destroy(); 
+    
+    //Move vertically
+    y += vspd;
+    
+    //Look for a projectile
+    incoming_bullet = instance_place(x,y,obj_bullet);
+    
+    if (instance_exists(incoming_bullet) &amp;&amp; enemy_hp &gt; 2) {
+        wobbling = true;
+        with incoming_bullet { 
+            instance_destroy(); 
+        }
+        audio_play_sound(snd_critter_damage,5,false);
+        instance_create(x,y,obj_enemy_damage);
+        instance_create(x,y,obj_enemy_damage);
+        instance_create(x,y,obj_enemy_damage);
+        enemy_hp -= 2;
+            
+    } else if (instance_exists(incoming_bullet) &amp;&amp; enemy_hp == 2) {
+        with incoming_bullet { 
+            instance_destroy(); 
+        }
+        audio_play_sound(snd_enemy_explode,5,false);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_battery_small);
+        instance_create(x,y,obj_battery_small);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_big_explosion);
+        instance_destroy();
     }
-    audio_play_sound(snd_critter_damage,5,false);
-    instance_create(x,y,obj_enemy_damage);
-    instance_create(x,y,obj_enemy_damage);
-    instance_create(x,y,obj_enemy_damage);
-    enemy_hp -= 1;
-        
-} else if (instance_exists(incoming_explosion) &amp;&amp; enemy_hp == 1) {
-    with incoming_explosion { 
-        instance_destroy(); 
+    
+    //Look for a spur
+    incoming_spur = instance_place(x,y,obj_spur_a);
+    
+    if (instance_exists(incoming_spur) &amp;&amp; enemy_hp &gt; 1) {
+        wobbling = true;
+        with incoming_spur { 
+            contact = true; 
+        }
+        audio_play_sound(snd_critter_damage,5,false);
+        instance_create(x,y,obj_enemy_damage);
+        instance_create(x,y,obj_enemy_damage);
+        instance_create(x,y,obj_enemy_damage);
+        enemy_hp -= 1;
+            
+    } else if (instance_exists(incoming_spur) &amp;&amp; enemy_hp == 1) {
+        with incoming_spur { 
+            contact = true; 
+        }
+        audio_play_sound(snd_enemy_explode,5,false);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_battery_small);
+        instance_create(x,y,obj_battery_small);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_big_explosion);
+        instance_destroy();
     }
-    audio_play_sound(snd_enemy_explode,5,false);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_battery_small);
-    instance_create(x,y,obj_battery_small);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_big_explosion);
-    instance_destroy();
-}
+    
+    //Look for a projectile
+    incoming_explosion = instance_place(x,y,obj_player_death);
+    
+    if (instance_exists(incoming_explosion) &amp;&amp; enemy_hp &gt; 1) {
+        wobbling = true;
+        with incoming_explosion { 
+            instance_destroy(); 
+        }
+        audio_play_sound(snd_critter_damage,5,false);
+        instance_create(x,y,obj_enemy_damage);
+        instance_create(x,y,obj_enemy_damage);
+        instance_create(x,y,obj_enemy_damage);
+        enemy_hp -= 1;
+            
+    } else if (instance_exists(incoming_explosion) &amp;&amp; enemy_hp == 1) {
+        with incoming_explosion { 
+            instance_destroy(); 
+        }
+        audio_play_sound(snd_enemy_explode,5,false);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_battery_small);
+        instance_create(x,y,obj_battery_small);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_big_explosion);
+        instance_destroy();
+    }
 
 
 } // global pause

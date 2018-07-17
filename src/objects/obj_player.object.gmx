@@ -253,6 +253,8 @@ if (place_meeting(x,y-1,obj_collision) &amp;&amp; can_ceiling_sound == true) {
     can_ceiling_sound = false;
 }
 
+/*
+
 if (keyboard_check_pressed(ord('C'))) {
     //instance_create(x,y-10,obj_collide_ceiling);
     circle = instance_create(x,y-10,obj_spur_outline);
@@ -262,6 +264,8 @@ if (keyboard_check_pressed(ord('C'))) {
         instance_create(x,y,obj_spur_c);
     }
 }
+
+*/
 
 //} // collapse
 
@@ -502,9 +506,13 @@ if (obj_player.SelectedWeaponIndex = 0 &amp;&amp; WeaponCount &gt; 0) {
 
 }
 
+/*
+
 if (keyboard_check_pressed(ord('V'))) {
     instance_create(x,y,obj_sword_right);
 }
+
+*/
 </string>
           </argument>
         </arguments>
@@ -774,76 +782,76 @@ y = player_y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.pause == 0) {
+            <string>///Draw weapon
 
-///Draw weapon
-
-move = (-keyboard_check(vk_left)) + (keyboard_check(vk_right));
-move_pressed = (-keyboard_check_pressed(vk_left)+keyboard_check_pressed(vk_right));
-
-if (SelectedWeaponIndex = 0 &amp;&amp; WeaponCount &gt; 0) {
-
-    if (move == 0) {
-        if (sprite_index == spr_player_down_air) {
-            draw_sprite_ext(spr_gun_down, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_up_jumping || sprite_index == spr_player_up_falling) {
-            draw_sprite_ext(spr_gun_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_jumping || sprite_index == spr_player_falling) {
-            draw_sprite_ext(spr_gun_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_standing) {
-            draw_sprite_ext(spr_gun_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_up_standing) {
-            draw_sprite_ext(spr_gun_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_down_ground) {
-            draw_sprite_ext(spr_gun_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        }
-    } else if (vspd == 0) {
-        if (keyboard_check(vk_up)) {
-            draw_sprite_ext(spr_gun_up, 0, x, y, move, 1, 0, image_blend, image_alpha);
+if (global.pause == 0) {
+    
+    move = (-keyboard_check(vk_left)) + (keyboard_check(vk_right));
+    move_pressed = (-keyboard_check_pressed(vk_left)+keyboard_check_pressed(vk_right));
+    
+    if (SelectedWeaponIndex = 0 &amp;&amp; WeaponCount &gt; 0) {
+    
+        if (move == 0) {
+            if (sprite_index == spr_player_down_air) {
+                draw_sprite_ext(spr_gun_down, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_up_jumping || sprite_index == spr_player_up_falling) {
+                draw_sprite_ext(spr_gun_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_jumping || sprite_index == spr_player_falling) {
+                draw_sprite_ext(spr_gun_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_standing) {
+                draw_sprite_ext(spr_gun_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_up_standing) {
+                draw_sprite_ext(spr_gun_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_down_ground) {
+                draw_sprite_ext(spr_gun_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            }
+        } else if (vspd == 0) {
+            if (keyboard_check(vk_up)) {
+                draw_sprite_ext(spr_gun_up, 0, x, y, move, 1, 0, image_blend, image_alpha);
+            } else {
+                draw_sprite_ext(spr_gun_side, 0, x, y, move, 1, 0, image_blend, image_alpha);
+            }
         } else {
-            draw_sprite_ext(spr_gun_side, 0, x, y, move, 1, 0, image_blend, image_alpha);
+            if (keyboard_check(vk_down)) {
+                draw_sprite_ext(spr_gun_down, 0, x, y, move, 1, 1, image_blend, image_alpha);
+            } else if (keyboard_check(vk_up)) {
+                draw_sprite_ext(spr_gun_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else {
+                draw_sprite_ext(spr_gun_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            }
         }
-    } else {
-        if (keyboard_check(vk_down)) {
-            draw_sprite_ext(spr_gun_down, 0, x, y, move, 1, 1, image_blend, image_alpha);
-        } else if (keyboard_check(vk_up)) {
-            draw_sprite_ext(spr_gun_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+    } else if (SelectedWeaponIndex = 1 &amp;&amp; WeaponCount &gt; 1) {
+    
+        if (move == 0) {
+            if (sprite_index == spr_player_down_air) {
+                draw_sprite_ext(spr_machine_down, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_up_jumping || sprite_index == spr_player_up_falling) {
+                draw_sprite_ext(spr_machine_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_jumping || sprite_index == spr_player_falling) {
+                draw_sprite_ext(spr_machine_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_standing) {
+                draw_sprite_ext(spr_machine_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_up_standing) {
+                draw_sprite_ext(spr_machine_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else if (sprite_index == spr_player_down_ground) {
+                draw_sprite_ext(spr_machine_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            }
+        } else if (vspd == 0) {
+            if (keyboard_check(vk_up)) {
+                draw_sprite_ext(spr_machine_up, 0, x, y, move, 1, 0, image_blend, image_alpha);
+            } else {
+                draw_sprite_ext(spr_machine_side, 0, x, y, move, 1, 0, image_blend, image_alpha);
+            }
         } else {
-            draw_sprite_ext(spr_gun_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            if (keyboard_check(vk_down)) {
+                draw_sprite_ext(spr_machine_down, 0, x, y, move, 1, 1, image_blend, image_alpha);
+            } else if (keyboard_check(vk_up)) {
+                draw_sprite_ext(spr_machine_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            } else {
+                draw_sprite_ext(spr_machine_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
+            }
         }
     }
-} else if (SelectedWeaponIndex = 1 &amp;&amp; WeaponCount &gt; 1) {
-
-    if (move == 0) {
-        if (sprite_index == spr_player_down_air) {
-            draw_sprite_ext(spr_machine_down, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_up_jumping || sprite_index == spr_player_up_falling) {
-            draw_sprite_ext(spr_machine_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_jumping || sprite_index == spr_player_falling) {
-            draw_sprite_ext(spr_machine_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_standing) {
-            draw_sprite_ext(spr_machine_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_up_standing) {
-            draw_sprite_ext(spr_machine_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else if (sprite_index == spr_player_down_ground) {
-            draw_sprite_ext(spr_machine_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        }
-    } else if (vspd == 0) {
-        if (keyboard_check(vk_up)) {
-            draw_sprite_ext(spr_machine_up, 0, x, y, move, 1, 0, image_blend, image_alpha);
-        } else {
-            draw_sprite_ext(spr_machine_side, 0, x, y, move, 1, 0, image_blend, image_alpha);
-        }
-    } else {
-        if (keyboard_check(vk_down)) {
-            draw_sprite_ext(spr_machine_down, 0, x, y, move, 1, 1, image_blend, image_alpha);
-        } else if (keyboard_check(vk_up)) {
-            draw_sprite_ext(spr_machine_up, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        } else {
-            draw_sprite_ext(spr_machine_side, 0, x, y, image_xscale, 1, 0, image_blend, image_alpha);
-        }
-    }
-}
 
 
 }
