@@ -63,7 +63,7 @@ if(point_distance(x,y,view_xview,y) &lt;= speed) {
 }
 
 // originally 200 timer
-if (timer &gt;= 314) {
+if (timer &gt;= 230) {
     instance_destroy();
 }
 </string>

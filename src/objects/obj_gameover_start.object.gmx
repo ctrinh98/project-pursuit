@@ -71,7 +71,7 @@ if (timer &gt;= 50) &amp;&amp; (text == false) {
 }
 
 // originally 150 timer
-if (timer &gt;= 250) &amp;&amp; (done == false) {
+if (timer &gt;= 170) &amp;&amp; (done == false) {
     instance_create(view_xview, view_yview,obj_gameover_end);
     done = true;
 }

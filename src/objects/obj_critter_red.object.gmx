@@ -236,8 +236,10 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
         instance_create(x,y,obj_small_explosion);
         instance_create(x,y,obj_battery_small);
         instance_create(x,y,obj_battery_small);
+        instance_create(x,y,obj_battery_small);
         instance_create(x,y,obj_small_explosion);
         instance_create(x,y,obj_big_explosion);
+        global.gamescore += 200;
         instance_destroy();
     }
     

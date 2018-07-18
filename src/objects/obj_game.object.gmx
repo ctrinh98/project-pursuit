@@ -38,6 +38,10 @@ image_speed = 0.05;
 t_b = 0;
 draw_set_color(c_white);
 global.gameover = false;
+global.gamescore = 0;
+global.gametimem = 0;
+global.gametimes = 0;
+global.gametimems = 0;
 
 //Warp variables
 obj_player.player_x = obj_player.xstart;
@@ -70,8 +74,15 @@ global.talking = false;
             <string>///Battery life drain and gameover
 if (global.battery &gt; 0) {
     t_b += 1;
+    global.gametimems += 1;
     if (t_b &gt;= 60) {
         global.battery -= 1;
+        global.gametimes += 1;
+        global.gametimems = 0;
+        if (global.gametimes == 60) {
+            global.gametimem += 1;
+            global.gametimes = 0; 
+        }
         t_b = 0;
     }
 } else if (global.battery == 0) {
@@ -233,7 +244,7 @@ if (global.pause == 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Bullet counter
+            <string>/// Bullet counter and time/score
 /*
 if (object_exists(obj_player)) {
 
@@ -271,6 +282,12 @@ if (global.pause == 0) {
         }
         draw_text(view_xview + 76,view_yview + 30,obj_player.TotalShots);
     }
+    
+    draw_set_font(global.font_number);
+    draw_text(view_xview + 250, view_yview + 20, global.gametimem);
+    draw_text(view_xview + 275, view_yview + 20, global.gametimes);
+    draw_text(view_xview + 300, view_yview + 20, global.gametimems);
+    draw_text(view_xview + 270, view_yview + 30, global.gamescore);
 
 }
 
