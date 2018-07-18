@@ -626,14 +626,21 @@ enemy_exist = instance_place(x,y,obj_enemy)
 spike_exist = instance_place(x,y,obj_spikes)
 
 if (instance_exists(enemy_exist) &amp;&amp; hit_by_enemy == false &amp;&amp; global.player_hp = 2) {
-    audio_stop_sound(global.bgm);
+//    audio_stop_sound(global.bgm);
     sprite_index = spr_blank;
     global.pause = 1;
     global.player_hp -= 2;
 //    for (var i = 0; i &lt; 40; i++) {
 //        instance_create(random_range(x-30,x+30),random_range(y-30,y+30),obj_player_death);
 //    }
-    audio_play_sound(snd_player_death,5,false);
+//    audio_sound_gain(global.static, 0.0, 0);
+    audio_stop_sound(global.static);
+    if (global.gameover == false) {
+        global.pause = 1;
+        audio_play_sound(snd_player_death,5,false);
+        instance_create(view_xview, view_yview,obj_gameover_start);
+        global.gameover = true;
+    }
 
 } else if (instance_exists(enemy_exist) &amp;&amp; hit_by_enemy == false &amp;&amp; global.player_hp &gt; 2) {
     hit_by_enemy = true;

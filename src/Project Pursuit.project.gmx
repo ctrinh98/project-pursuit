@@ -30,7 +30,7 @@
     <sound>sound\so_chat</sound>
     <sound>sound\bgm_labyrinth_fight</sound>
     <sound>sound\bgm_static</sound>
-    <sound>sound\bgm_gameover</sound>
+    <sound>sound\snd_gameover</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
@@ -127,6 +127,7 @@
     <sprite>sprites\spr_spur_b</sprite>
     <sprite>sprites\spr_spur_c</sprite>
     <sprite>sprites\spr_spur_outline</sprite>
+    <sprite>sprites\spr_gameover_text</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_start_point</background>
@@ -188,6 +189,7 @@
     <object>objects\obj_machine_empty</object>
     <object>objects\obj_gameover_start</object>
     <object>objects\obj_gameover_end</object>
+    <object>objects\obj_gameover_text</object>
     <object>objects\obj_player_collapse</object>
     <object>objects\obj_spur_a</object>
     <object>objects\obj_spur_b</object>

@@ -25,14 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.40;
+            <string>//image_speed = 0.40;
+image_speed = 0.50;
 timer = 0;
-gameoversound = false
-
-if (gameoversound == false) {
-    //audio_play_sound(bgm_gameover,1,false);
-    gameoversound = true;
-}
+go_snd = false
 </string>
           </argument>
         </arguments>
@@ -59,6 +55,12 @@ if (gameoversound == false) {
 
 if (timer &gt;= 300) {
     game_restart();
+}
+
+if (go_snd == false) {
+    //audio_play_sound(bgm_gameover,1,false);
+    audio_play_sound(snd_gameover,5,false);
+    go_snd = true;
 }
 </string>
           </argument>
