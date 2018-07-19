@@ -199,9 +199,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\rm_last_cave_old</room>
     <room>rooms\rm_last_cave</room>
     <room>rooms\room1</room>
-    <room>rooms\rm_last_cave_old</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
