@@ -29,10 +29,19 @@
 
 var tempx = obj_player.x;
 var tempy = obj_player.y;
+var etimer = 0;
 
 with obj_player sprite_index = spr_blank;
 
-instance_create(tempx, tempy, obj_player_collapse);
+for (var i = 0; i &lt; 1200; i++) {
+    etimer += 1;
+    
+    if (etimer == 40) {
+        instance_create(random_range(tempx-30,tempx+30),random_range(tempy-30,tempy+30),obj_player_death);
+        etimer = 0;
+    }
+    
+}
 
 timer = 0;
 text = false;

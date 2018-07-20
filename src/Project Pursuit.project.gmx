@@ -152,7 +152,6 @@
     </objects>
     <objects name="obj_collision">
       <object>objects\obj_wall</object>
-      <object>objects\obj_collide_ceiling</object>
       <object>objects\obj_slope_large_ne</object>
       <object>objects\obj_slope_large_nw</object>
       <object>objects\obj_slope_large_se</object>
@@ -170,20 +169,26 @@
     <objects name="obj_enemy">
       <object>objects\obj_bat_red</object>
       <object>objects\obj_critter_red</object>
-      <object>objects\obj_small_explosion</object>
+      <object>objects\object50</object>
       <object>objects\obj_spikes_e</object>
       <object>objects\obj_spikes_n</object>
       <object>objects\obj_sprites_s</object>
       <object>objects\obj_sprites_w</object>
-      <object>objects\obj_battery_large</object>
-      <object>objects\obj_battery_medium</object>
-      <object>objects\obj_big_explosion</object>
-      <object>objects\obj_battery_small</object>
-      <object>objects\obj_enemy_damage</object>
     </objects>
-    <object>objects\obj_playerb</object>
-    <object>objects\obj_machine_bullet</object>
-    <object>objects\obj_bullet</object>
+    <objects name="obj_animation">
+      <object>objects\obj_collide_ceiling</object>
+      <object>objects\obj_enemy_damage</object>
+      <object>objects\obj_big_explosion</object>
+      <object>objects\obj_player_death</object>
+      <object>objects\obj_small_explosion</object>
+    </objects>
+    <objects name="obj_items">
+      <object>objects\obj_battery_large</object>
+      <object>objects\obj_battery_small</object>
+      <object>objects\obj_battery_medium</object>
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_machine_bullet</object>
+    </objects>
     <object>objects\obj_bullet_fire</object>
     <object>objects\obj_bullet_collide</object>
     <object>objects\obj_machine_empty</object>
@@ -191,17 +196,19 @@
     <object>objects\obj_gameover_end</object>
     <object>objects\obj_gameover_text</object>
     <object>objects\obj_player_collapse</object>
-    <object>objects\obj_spur_a</object>
-    <object>objects\obj_spur_b</object>
-    <object>objects\obj_spur_c</object>
-    <object>objects\obj_spur_outline</object>
-    <object>objects\obj_player_death</object>
+    <objects name="obj_beta">
+      <object>objects\obj_playerb</object>
+      <object>objects\obj_spur_outline</object>
+      <object>objects\obj_spur_a</object>
+      <object>objects\obj_spur_b</object>
+      <object>objects\obj_spur_c</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
     <room>rooms\rm_last_cave_old</room>
     <room>rooms\rm_last_cave</room>
-    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
