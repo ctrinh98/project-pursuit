@@ -15,7 +15,7 @@ The goal is to finish and release Project Pursuit before the end of August. (201
 ## Release
 As of July 15th, 2018, there is a projected release date of August 2018. It'll be released on itch.io as an HTML5 game first.
 
-You can see the progress at https://ctrinh98.github.io/project-pursuit/, but be warned that this preview is not fully representative of the final project.
+You can see the progress at https://ctrinh98.github.io/project-pursuit/play/, but be warned that this preview is not fully representative of the final project.
 
 ## Roadmap
 - [x] Core platforming mechanics and engine
