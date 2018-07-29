@@ -169,6 +169,20 @@ audio_sound_gain(global.static, 0.0, 0);
     <instance objName="obj_bat_red" x="45" y="105" name="inst_400F855A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bat_red" x="45" y="30" name="inst_77A14162" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bat_red" x="75" y="120" name="inst_547E4F08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="150" y="105" name="inst_C729F076" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="165" y="105" name="inst_D47BF21E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="60" y="75" name="inst_5DA0D4AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="30" y="45" name="inst_2404A80B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="90" y="45" name="inst_082A8347" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="150" y="30" name="inst_35A67987" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="225" y="60" name="inst_4278EE43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="255" y="45" name="inst_B34BD76E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="270" y="75" name="inst_1AE52689" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="195" y="45" name="inst_C12C361B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="210" y="105" name="inst_ED543E9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="210" y="150" name="inst_0EDA1B5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="105" y="90" name="inst_AAD6B391" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_press" x="15" y="90" name="inst_9B017EC2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tileset_start_point" x="0" y="180" w="15" h="15" xo="0" yo="30" id="10000001" name="inst_D9536E81" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -122,12 +122,16 @@
       <sprite>sprites\spr_sprites_s</sprite>
       <sprite>sprites\spr_sprites_w</sprite>
       <sprite>sprites\spr_enemy_damage</sprite>
+      <sprite>sprites\spr_press</sprite>
     </sprites>
     <sprite>sprites\spr_spur_a</sprite>
     <sprite>sprites\spr_spur_b</sprite>
     <sprite>sprites\spr_spur_c</sprite>
     <sprite>sprites\spr_spur_outline</sprite>
     <sprite>sprites\spr_gameover_text</sprite>
+    <sprites name="spr_font">
+      <sprite>sprites\spr_font</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\back_start_point</background>
@@ -174,6 +178,7 @@
       <object>objects\obj_spikes_n</object>
       <object>objects\obj_sprites_s</object>
       <object>objects\obj_sprites_w</object>
+      <object>objects\obj_press</object>
     </objects>
     <objects name="obj_animation">
       <object>objects\obj_collide_ceiling</object>
@@ -209,6 +214,7 @@
     <room>rooms\room1</room>
     <room>rooms\rm_last_cave_old</room>
     <room>rooms\rm_last_cave</room>
+    <room>rooms\rm_results</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
