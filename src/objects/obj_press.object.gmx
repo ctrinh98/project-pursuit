@@ -3,7 +3,7 @@
   <spriteName>spr_press</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1215752192</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -91,19 +91,19 @@ if (y &lt; obj_player.y) {
     
     // calculate the distance
     
-    if (point_distance(self.x, self.y, obj_player.x, self.y) &gt;= 36) {
+    if (point_distance(self.x+8, self.y, obj_player.x, self.y) &gt;= 36) {
         if (y = ystart) {
             image_index = 0;
         }
     }
     
-    if (point_distance(self.x, self.y, obj_player.x, self.y) &lt; 36) {
+    if (point_distance(self.x+8, self.y, obj_player.x, self.y) &lt; 36) {
         if (y = ystart) {
             image_index = 1;
         }
     }
     
-    if (point_distance(self.x, self.y, obj_player.x, self.y) &lt;= 12) {
+    if (point_distance(self.x+8, self.y, obj_player.x, self.y) &lt;= 8) {
         if (y = ystart) {
             gravity = 0.75;
         }
@@ -138,7 +138,7 @@ if (vspeed &gt;= 2.5) {
     vspeed = 2.5;
 }
 
-if (place_meeting(x, y+1, obj_wall)) {
+if (place_meeting(x, y+1, obj_collision)) {
     if (mode = 2) {
         mode = 3;
         gravity = 0;
@@ -146,34 +146,6 @@ if (place_meeting(x, y+1, obj_wall)) {
         view_yview = random_range(-8, 8);
         vspeed = 0;
     }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_collision">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (mode = 2) {
-    mode = 3;
-    gravity = 0;
-    alarm[0] = 30;
-    view_yview = random_range(-8, 8);
 }
 </string>
           </argument>

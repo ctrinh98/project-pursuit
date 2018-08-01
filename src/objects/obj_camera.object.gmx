@@ -297,7 +297,7 @@ if (fade) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>shake = 15;
+            <string>shake += 15;
 </string>
           </argument>
         </arguments>

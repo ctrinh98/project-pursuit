@@ -34,6 +34,12 @@ if keyboard_check_pressed(vk_escape) {
 if keyboard_check_pressed(ord('R')) {
     game_restart()
 }
+
+//Shake key
+if keyboard_check_pressed(ord('C')) {
+    view_xview += 60;
+    view_yview += 60;
+}
 </string>
           </argument>
         </arguments>
