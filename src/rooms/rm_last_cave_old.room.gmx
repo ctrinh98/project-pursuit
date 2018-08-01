@@ -527,10 +527,9 @@ var global.roomname = "Last Cave";</code>
     <instance objName="obj_wall" x="120" y="120" name="inst_6A1F28C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="105" y="120" name="inst_3D92F078" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="90" y="105" name="inst_2BD5E838" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="90" y="90" name="inst_560CB451" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="90" y="75" name="inst_7EA61893" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="105" y="45" name="inst_F98C341E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="105" y="30" name="inst_55CB1D3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="60" y="120" name="inst_560CB451" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="45" y="120" name="inst_7EA61893" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="120" name="inst_F98C341E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="120" y="15" name="inst_11A87A0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="180" y="15" name="inst_5F728124" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="135" y="15" name="inst_F7FBE124" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -541,7 +540,6 @@ var global.roomname = "Last Cave";</code>
     <instance objName="obj_wall" x="180" y="60" name="inst_8F350007" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="165" y="60" name="inst_4ACF8E0C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="150" y="60" name="inst_831BED80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_wall" x="90" y="60" name="inst_D24C50A8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slope_small_sw" x="150" y="795" name="inst_97633C23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slope_small_sw" x="255" y="810" name="inst_C2A6810C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slope_small_sw" x="300" y="810" name="inst_E7B0878C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1024,7 +1022,6 @@ var global.roomname = "Last Cave";</code>
     <instance objName="obj_slope_small_nw" x="420" y="90" name="inst_5FFFA364" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slope_small_ne" x="405" y="90" name="inst_10B1DD56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slope_small_ne" x="195" y="75" name="inst_6D931AF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_slope_large_nw" x="105" y="60" name="inst_B2C75560" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slope_large_nw" x="150" y="15" name="inst_537C1D64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slope_large_ne" x="165" y="15" name="inst_940EAE34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slope_small_sw" x="180" y="105" name="inst_080EFACF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1137,6 +1134,26 @@ var global.roomname = "Last Cave";</code>
     <instance objName="obj_press" x="690" y="45" name="inst_C1261449" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_press" x="750" y="45" name="inst_6146D8F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_press" x="810" y="45" name="inst_2FF1C656" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="90" name="inst_CD4B02B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="30" y="120" name="inst_76EABE96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="15" y="120" name="inst_3751BABF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="105" name="inst_0936B615" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="105" y="15" name="inst_6F6E17E2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="90" y="15" name="inst_62D47424" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="75" y="15" name="inst_4044170D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="60" y="15" name="inst_C3A1A3E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="45" y="15" name="inst_114492B6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="30" y="15" name="inst_9D20A168" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="15" y="15" name="inst_9F55EA53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="15" name="inst_50E7679D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="30" name="inst_8ED46631" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="60" name="inst_DE293FC1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="75" name="inst_D9B6DF4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="0" y="45" name="inst_01A8F289" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="75" y="120" name="inst_077DEBE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_wall" x="90" y="120" name="inst_7891CA4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slope_small_se" x="60" y="105" name="inst_A785528D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_slope_large_se" x="75" y="105" name="inst_F2F9DFD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tileset_last_cave" x="225" y="45" w="15" h="15" xo="180" yo="45" id="10012139" name="inst_3670F329" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -3057,20 +3074,8 @@ var global.roomname = "Last Cave";</code>
     <tile bgName="tileset_last_cave" x="450" y="90" w="15" h="15" xo="15" yo="45" id="10009179" name="inst_35A0F34F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="390" y="120" w="15" h="15" xo="0" yo="45" id="10009180" name="inst_3B8B4E28" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="90" y="105" w="15" h="15" xo="45" yo="0" id="10009181" name="inst_A9166C9D" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="90" y="75" w="15" h="15" xo="45" yo="0" id="10009182" name="inst_38105B4F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="90" y="45" w="15" h="15" xo="45" yo="0" id="10009183" name="inst_A9E6D3A6" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="90" y="15" w="15" h="15" xo="45" yo="0" id="10009184" name="inst_4289F43D" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="105" y="90" w="15" h="15" xo="120" yo="45" id="10009185" name="inst_3E2FD166" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="105" y="75" w="15" h="15" xo="120" yo="30" id="10009186" name="inst_3C6D432A" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="105" y="60" w="15" h="15" xo="45" yo="30" id="10009187" name="inst_869613D9" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="120" y="45" w="15" h="15" xo="120" yo="30" id="10009189" name="inst_4E9F7CBF" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="105" y="15" w="15" h="15" xo="60" yo="0" id="10009190" name="inst_3AA4251C" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="105" y="45" w="15" h="15" xo="60" yo="0" id="10009191" name="inst_4379ED57" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="90" y="90" w="15" h="15" xo="45" yo="15" id="10009192" name="inst_D54C38E5" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="90" y="60" w="15" h="15" xo="45" yo="15" id="10009193" name="inst_0AA1AE1E" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="90" y="30" w="15" h="15" xo="45" yo="15" id="10009194" name="inst_BB7A84F5" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="105" y="30" w="15" h="15" xo="60" yo="15" id="10009195" name="inst_461E1A35" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="120" y="30" w="15" h="15" xo="60" yo="30" id="10009196" name="inst_C148FA90" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="135" y="30" w="15" h="15" xo="15" yo="45" id="10009197" name="inst_42F09F15" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="150" y="15" w="15" h="15" xo="45" yo="30" id="10009199" name="inst_80617228" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="165" y="15" w="15" h="15" xo="90" yo="30" id="10009200" name="inst_4DC6DD82" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -5790,64 +5795,24 @@ var global.roomname = "Last Cave";</code>
     <tile bgName="tileset_last_cave" x="210" y="15" w="15" h="15" xo="45" yo="0" id="10011928" name="inst_92A6E470" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="60" y="15" w="15" h="15" xo="45" yo="0" id="10011929" name="inst_569DFBFF" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="30" y="15" w="15" h="15" xo="45" yo="0" id="10011930" name="inst_1337E6C7" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="0" y="15" w="15" h="15" xo="45" yo="0" id="10011931" name="inst_53BF1E77" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="0" y="45" w="15" h="15" xo="45" yo="0" id="10011932" name="inst_B618EFBA" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="30" y="45" w="15" h="15" xo="45" yo="0" id="10011933" name="inst_3738B271" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="60" y="45" w="15" h="15" xo="45" yo="0" id="10011934" name="inst_D7CB9E2E" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="60" y="75" w="15" h="15" xo="45" yo="0" id="10011935" name="inst_2CFD9896" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="30" y="75" w="15" h="15" xo="45" yo="0" id="10011936" name="inst_83D981FD" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="0" y="75" w="15" h="15" xo="45" yo="0" id="10011937" name="inst_4FF4DD81" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="0" y="105" w="15" h="15" xo="45" yo="0" id="10011938" name="inst_2DE5394F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="30" y="105" w="15" h="15" xo="45" yo="0" id="10011939" name="inst_1384240D" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="60" y="105" w="15" h="15" xo="45" yo="0" id="10011940" name="inst_1542FD95" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="15" y="120" w="15" h="15" xo="60" yo="15" id="10011941" name="inst_924E867B" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="45" y="120" w="15" h="15" xo="60" yo="15" id="10011942" name="inst_A81F28A7" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="75" y="120" w="15" h="15" xo="60" yo="15" id="10011943" name="inst_A18EC196" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="105" y="120" w="15" h="15" xo="60" yo="15" id="10011944" name="inst_1F8A7AD0" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="135" y="120" w="15" h="15" xo="60" yo="15" id="10011945" name="inst_BCE833B0" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="165" y="120" w="15" h="15" xo="60" yo="15" id="10011946" name="inst_AB89891A" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="75" y="90" w="15" h="15" xo="60" yo="15" id="10011947" name="inst_334F7FBD" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="45" y="90" w="15" h="15" xo="60" yo="15" id="10011948" name="inst_67AE3445" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="15" y="90" w="15" h="15" xo="60" yo="15" id="10011949" name="inst_19FFF503" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="15" y="60" w="15" h="15" xo="60" yo="15" id="10011950" name="inst_484EF082" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="45" y="60" w="15" h="15" xo="60" yo="15" id="10011951" name="inst_7BAA552C" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="75" y="60" w="15" h="15" xo="60" yo="15" id="10011952" name="inst_D1653105" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="75" y="30" w="15" h="15" xo="60" yo="15" id="10011953" name="inst_74849BCB" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="45" y="30" w="15" h="15" xo="60" yo="15" id="10011954" name="inst_91273944" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="15" y="30" w="15" h="15" xo="60" yo="15" id="10011955" name="inst_DF0B996E" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="15" y="0" w="15" h="15" xo="60" yo="15" id="10011956" name="inst_11F5C29B" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="45" y="0" w="15" h="15" xo="60" yo="15" id="10011957" name="inst_D18D3E73" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="75" y="0" w="15" h="15" xo="60" yo="15" id="10011958" name="inst_80C9933F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="0" y="0" w="15" h="15" xo="45" yo="15" id="10011959" name="inst_E0184070" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="0" y="30" w="15" h="15" xo="45" yo="15" id="10011960" name="inst_87E85E7F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="0" y="60" w="15" h="15" xo="45" yo="15" id="10011961" name="inst_0ED2612F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="0" y="90" w="15" h="15" xo="45" yo="15" id="10011962" name="inst_761ECECD" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="0" y="120" w="15" h="15" xo="45" yo="15" id="10011963" name="inst_B9FA928D" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="30" y="120" w="15" h="15" xo="45" yo="15" id="10011964" name="inst_31B3B934" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="30" y="90" w="15" h="15" xo="45" yo="15" id="10011965" name="inst_E99E6684" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="30" y="60" w="15" h="15" xo="45" yo="15" id="10011966" name="inst_01BBF2BF" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="30" y="30" w="15" h="15" xo="45" yo="15" id="10011967" name="inst_55A80BBD" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="30" y="0" w="15" h="15" xo="45" yo="15" id="10011968" name="inst_A75F7426" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="60" y="0" w="15" h="15" xo="45" yo="15" id="10011969" name="inst_1DE20319" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="60" y="30" w="15" h="15" xo="45" yo="15" id="10011970" name="inst_058DB73E" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="60" y="60" w="15" h="15" xo="45" yo="15" id="10011971" name="inst_5EA764BC" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="60" y="90" w="15" h="15" xo="45" yo="15" id="10011972" name="inst_9F721D99" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="60" y="120" w="15" h="15" xo="45" yo="15" id="10011973" name="inst_20393970" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="90" y="120" w="15" h="15" xo="45" yo="15" id="10011974" name="inst_8B564D38" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="120" y="120" w="15" h="15" xo="45" yo="15" id="10011975" name="inst_B150A105" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="150" y="120" w="15" h="15" xo="45" yo="15" id="10011976" name="inst_32E94312" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="15" y="15" w="15" h="15" xo="60" yo="0" id="10011977" name="inst_783981DA" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="15" y="45" w="15" h="15" xo="60" yo="0" id="10011978" name="inst_D5FD481C" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="15" y="75" w="15" h="15" xo="60" yo="0" id="10011979" name="inst_BF5C64BB" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="15" y="105" w="15" h="15" xo="60" yo="0" id="10011980" name="inst_BB9E92EF" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="45" y="105" w="15" h="15" xo="60" yo="0" id="10011981" name="inst_ADC9AAD8" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="45" y="75" w="15" h="15" xo="60" yo="0" id="10011982" name="inst_05E58318" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="45" y="45" w="15" h="15" xo="60" yo="0" id="10011983" name="inst_666B922D" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="45" y="15" w="15" h="15" xo="60" yo="0" id="10011984" name="inst_E1AA54BD" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="75" y="15" w="15" h="15" xo="60" yo="0" id="10011985" name="inst_060F4E0B" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="75" y="45" w="15" h="15" xo="60" yo="0" id="10011986" name="inst_4FDD204D" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="75" y="75" w="15" h="15" xo="60" yo="0" id="10011987" name="inst_5BF26563" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tileset_last_cave" x="75" y="105" w="15" h="15" xo="60" yo="0" id="10011988" name="inst_3B6E9838" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="825" y="30" w="15" h="15" xo="60" yo="15" id="10011989" name="inst_3735B44D" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="825" y="0" w="15" h="15" xo="60" yo="15" id="10011990" name="inst_05C4C7D6" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="855" y="0" w="15" h="15" xo="60" yo="15" id="10011991" name="inst_0784DDB5" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -5998,6 +5963,33 @@ var global.roomname = "Last Cave";</code>
     <tile bgName="tileset_last_cave" x="795" y="15" w="15" h="15" xo="60" yo="0" id="10012136" name="inst_6BAE01D1" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="165" y="720" w="15" h="15" xo="15" yo="45" id="10012137" name="inst_79C5E6AF" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tileset_last_cave" x="180" y="720" w="15" h="15" xo="30" yo="45" id="10012138" name="inst_3873A3F6" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="30" y="120" w="15" h="15" xo="15" yo="15" id="10012248" name="inst_1E6D7ABC" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="15" y="120" w="15" h="15" xo="30" yo="15" id="10012251" name="inst_5A195149" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="60" y="120" w="15" h="15" xo="30" yo="15" id="10012255" name="inst_E267A24E" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="45" y="120" w="15" h="15" xo="15" yo="15" id="10012256" name="inst_9FB537D2" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="105" y="30" w="15" h="15" xo="15" yo="45" id="10012260" name="inst_3A4CB09E" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="75" y="30" w="15" h="15" xo="15" yo="45" id="10012261" name="inst_AAE9FA0A" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="45" y="30" w="15" h="15" xo="15" yo="45" id="10012262" name="inst_FB9E5817" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="30" y="30" w="15" h="15" xo="30" yo="45" id="10012265" name="inst_5C666B61" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="60" y="30" w="15" h="15" xo="30" yo="45" id="10012266" name="inst_E6F5DD5A" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="90" y="30" w="15" h="15" xo="30" yo="45" id="10012267" name="inst_36F9B915" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="120" y="30" w="15" h="15" xo="30" yo="45" id="10012268" name="inst_16EBAC4F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="45" y="105" w="15" h="15" xo="15" yo="30" id="10012271" name="inst_813D06D8" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="30" y="105" w="15" h="15" xo="30" yo="30" id="10012273" name="inst_851FE93B" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="0" y="0" w="15" h="15" xo="45" yo="15" id="10012283" name="inst_EA017033" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="0" y="15" w="15" h="15" xo="45" yo="0" id="10012284" name="inst_A6CE802A" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="15" y="15" w="15" h="15" xo="60" yo="0" id="10012285" name="inst_6C0872C2" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="75" y="105" w="15" h="15" xo="90" yo="45" id="10012608" name="inst_D87B010F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="60" y="105" w="15" h="15" xo="75" yo="45" id="10012609" name="inst_8D85CC15" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="0" y="45" w="15" h="15" xo="45" yo="0" id="10012611" name="inst_8A2BCF4F" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="0" y="30" w="15" h="15" xo="45" yo="15" id="10012612" name="inst_DA9C7787" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="0" y="60" w="15" h="15" xo="45" yo="15" id="10012613" name="inst_DCFC96BC" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="15" y="30" w="15" h="15" xo="75" yo="0" id="10012614" name="inst_00AFC8A3" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="15" y="45" w="15" h="15" xo="120" yo="30" id="10012616" name="inst_0AD3E2C5" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="15" y="75" w="15" h="15" xo="120" yo="30" id="10012617" name="inst_C1688CE3" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="15" y="60" w="15" h="15" xo="120" yo="45" id="10012618" name="inst_55F78617" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="15" y="90" w="15" h="15" xo="120" yo="45" id="10012619" name="inst_45357ACD" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tileset_last_cave" x="15" y="105" w="15" h="15" xo="75" yo="15" id="10012620" name="inst_1DF8A2B2" depth="-1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

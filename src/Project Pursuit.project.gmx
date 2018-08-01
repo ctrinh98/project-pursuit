@@ -33,10 +33,10 @@
     <sound>sound\snd_gameover</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_player</sprite>
     <sprites name="spr_player">
       <sprite>sprites\spr_player_up_walking</sprite>
       <sprite>sprites\spr_player_collapse</sprite>
+      <sprite>sprites\spr_transition</sprite>
       <sprite>sprites\spr_player_down_air</sprite>
       <sprite>sprites\spr_player_down_ground</sprite>
       <sprite>sprites\spr_player_up_standing</sprite>
@@ -90,22 +90,25 @@
       <sprite>sprites\spr_font_damage</sprite>
       <sprite>sprites\spr_font_hu</sprite>
       <sprite>sprites\spr_battery_duplicate</sprite>
+      <sprite>sprites\spr_gameover_text</sprite>
     </sprites>
     <sprites name="spr_animation">
       <sprite>sprites\spr_collide_ceiling</sprite>
     </sprites>
-    <sprite>sprites\spr_static_old</sprite>
-    <sprite>sprites\spr_static</sprite>
-    <sprite>sprites\spr_gameover_4x</sprite>
-    <sprite>sprites\spr_gameover_6x</sprite>
-    <sprite>sprites\spr_gameover_end</sprite>
-    <sprite>sprites\spr_gameover_start</sprite>
     <sprites name="spr_beta">
+      <sprite>sprites\spr_spur_outline</sprite>
+      <sprite>sprites\spr_spur_c</sprite>
+      <sprite>sprites\spr_spur_b</sprite>
+      <sprite>sprites\spr_spur_a</sprite>
       <sprite>sprites\spr_gameover_short</sprite>
       <sprite>sprites\spr_gameover_close</sprite>
       <sprite>sprites\spr_gameover_beta</sprite>
       <sprite>sprites\spr_gameover_opaque</sprite>
+      <sprite>sprites\spr_gameover_6x</sprite>
+      <sprite>sprites\spr_gameover_4x</sprite>
       <sprite>sprites\spr_gameover_startb</sprite>
+      <sprite>sprites\spr_static_old</sprite>
+      <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_gameover_end_short</sprite>
       <sprite>sprites\spr_gameover_endb</sprite>
     </sprites>
@@ -124,25 +127,54 @@
       <sprite>sprites\spr_enemy_damage</sprite>
       <sprite>sprites\spr_press</sprite>
     </sprites>
-    <sprite>sprites\spr_spur_a</sprite>
-    <sprite>sprites\spr_spur_b</sprite>
-    <sprite>sprites\spr_spur_c</sprite>
-    <sprite>sprites\spr_spur_outline</sprite>
-    <sprite>sprites\spr_gameover_text</sprite>
     <sprites name="spr_font">
       <sprite>sprites\spr_font</sprite>
+    </sprites>
+    <sprites name="spr_results">
+      <sprite>sprites\spr_results_base</sprite>
+      <sprite>sprites\spr_results_try_again</sprite>
+      <sprite>sprites\spr_results_ok</sprite>
+      <sprite>sprites\spr_results_just_ok</sprite>
+      <sprite>sprites\spr_results_superb</sprite>
+    </sprites>
+    <sprites name="spr_gameover">
+      <sprite>sprites\spr_static</sprite>
+      <sprite>sprites\spr_gameover_start</sprite>
+      <sprite>sprites\spr_gameover_end</sprite>
+    </sprites>
+    <sprites name="spr_title">
+      <sprite>sprites\spr_menu_start</sprite>
+      <sprite>sprites\spr_menu_leaderboard</sprite>
+      <sprite>sprites\spr_menu_options</sprite>
+      <sprite>sprites\spr_title</sprite>
+    </sprites>
+    <sprites name="spr_intro">
+      <sprite>sprites\spr_intro_dialogue_black</sprite>
+      <sprite>sprites\spr_bun_laptop_walking</sprite>
+      <sprite>sprites\spr_intro_black</sprite>
+      <sprite>sprites\spr_bun_laptop_trip</sprite>
+      <sprite>sprites\spr_enter_skip</sprite>
+      <sprite>sprites\spr_portrait_classic_blank</sprite>
+      <sprite>sprites\spr_chatbox_blank</sprite>
+      <sprite>sprites\spr_cursor_classic</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\back_start_point</background>
     <background>background\tileset_start_point</background>
     <background>background\tileset_last_cave</background>
+    <background>background\back_title</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\InitGame.gml</script>
     <script>scripts\EnemyExit.gml</script>
+    <script>scripts\newIntro.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\f_chat</font>
+    <font>fonts\f_default</font>
+  </fonts>
   <objects name="objects">
     <objects name="obj_fundamental">
       <object>objects\obj_game</object>
@@ -153,6 +185,8 @@
       <object>objects\obj_spikes</object>
       <object>objects\obj_camera</object>
       <object>objects\obj_camera_skip_intro</object>
+      <object>objects\obj_transition</object>
+      <object>objects\obj_dialogue_intro</object>
     </objects>
     <objects name="obj_collision">
       <object>objects\obj_wall</object>
@@ -183,8 +217,12 @@
     <objects name="obj_animation">
       <object>objects\obj_collide_ceiling</object>
       <object>objects\obj_enemy_damage</object>
+      <object>objects\obj_bullet_fire</object>
+      <object>objects\obj_machine_empty</object>
+      <object>objects\obj_bullet_collide</object>
       <object>objects\obj_big_explosion</object>
       <object>objects\obj_player_death</object>
+      <object>objects\obj_player_collapse</object>
       <object>objects\obj_small_explosion</object>
     </objects>
     <objects name="obj_items">
@@ -194,13 +232,6 @@
       <object>objects\obj_bullet</object>
       <object>objects\obj_machine_bullet</object>
     </objects>
-    <object>objects\obj_bullet_fire</object>
-    <object>objects\obj_bullet_collide</object>
-    <object>objects\obj_machine_empty</object>
-    <object>objects\obj_gameover_start</object>
-    <object>objects\obj_gameover_end</object>
-    <object>objects\obj_gameover_text</object>
-    <object>objects\obj_player_collapse</object>
     <objects name="obj_beta">
       <object>objects\obj_playerb</object>
       <object>objects\obj_spur_outline</object>
@@ -208,12 +239,52 @@
       <object>objects\obj_spur_b</object>
       <object>objects\obj_spur_c</object>
     </objects>
+    <objects name="obj_results">
+      <object>objects\obj_results</object>
+      <object>objects\obj_results_base</object>
+      <object>objects\obj_results_try_again</object>
+      <object>objects\obj_results_ok</object>
+      <object>objects\obj_results_just_ok</object>
+      <object>objects\obj_results_superb</object>
+    </objects>
+    <objects name="obj_title">
+      <object>objects\obj_title_static</object>
+      <object>objects\obj_cassie_title</object>
+      <object>objects\obj_player_title</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_menu_start</object>
+      <object>objects\obj_menu_options</object>
+      <object>objects\obj_menu_leaderboard</object>
+    </objects>
+    <objects name="obj_gameover">
+      <object>objects\obj_gameover_start</object>
+      <object>objects\obj_gameover_end</object>
+      <object>objects\obj_gameover_text</object>
+    </objects>
+    <objects name="obj_intro">
+      <object>objects\obj_intro_dialogue_black</object>
+      <object>objects\obj_intro_black</object>
+      <object>objects\obj_player_intro</object>
+      <object>objects\obj_bat_intro</object>
+      <object>objects\obj_critter_intro</object>
+      <object>objects\obj_battery_small_intro</object>
+      <object>objects\obj_battery_medium_intro</object>
+      <object>objects\obj_intro</object>
+      <object>objects\obj_skip_enter_intro</object>
+      <object>objects\obj_bun_skip</object>
+      <object>objects\obj_enter_skip</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_init</room>
+    <room>rooms\rm_opening_transition</room>
+    <room>rooms\rm_skip_intro</room>
+    <room>rooms\rm_title</room>
+    <room>rooms\rm_title_transition</room>
     <room>rooms\rm_last_cave_old</room>
     <room>rooms\room1</room>
     <room>rooms\rm_last_cave</room>
+    <room>rooms\rm_title_old</room>
     <room>rooms\rm_results</room>
   </rooms>
   <help>
