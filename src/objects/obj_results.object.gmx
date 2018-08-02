@@ -31,6 +31,7 @@ c1 = false;
 c2 = false;
 c3 = false;
 c4 = false;
+c5 = false;
 </string>
           </argument>
         </arguments>
@@ -53,16 +54,30 @@ c4 = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timer += 1/room_speed;
+            <string>timer ++;
 
-if (timer &gt;= 3) &amp;&amp; (c0 == false) {
-    instance_create(0,0,obj_results_base)
+if (timer &gt;= 50) &amp;&amp; (c0 == false) {
+    audio_play_sound(snd_results_base, 5, false);
+    instance_create(0,0,obj_results_base);
     c0 = true;
 }
 
-if (timer &gt;= 7) &amp;&amp; (c3 == false) {
+if (timer &gt;= 150) &amp;&amp; (c3 == false) {
+    audio_play_sound(snd_results_statement, 5, false);
     instance_create(0,0,obj_results_just_ok)
     c3 = true;
+}
+
+if (timer &gt;= 270) &amp;&amp; (c4 == false) {
+    audio_play_sound(snd_results_ok, 5, false);
+    instance_create(0,0,obj_results_just_ok_icon)
+    c4 = true;
+}
+
+if (timer &gt;= 300) &amp;&amp; (c5 == false) {
+    audio_play_sound(bgm_results_ok, 5, false);
+    instance_create(50,190,obj_z_key);
+    c5 = true;
 }
 </string>
           </argument>

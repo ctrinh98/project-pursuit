@@ -31,6 +31,11 @@
     <sound>sound\bgm_labyrinth_fight</sound>
     <sound>sound\bgm_static</sound>
     <sound>sound\snd_gameover</sound>
+    <sound>sound\bgm_title</sound>
+    <sound>sound\snd_results_base</sound>
+    <sound>sound\snd_results_statement</sound>
+    <sound>sound\snd_results_ok</sound>
+    <sound>sound\bgm_results_ok</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="spr_player">
@@ -135,6 +140,7 @@
       <sprite>sprites\spr_results_try_again</sprite>
       <sprite>sprites\spr_results_ok</sprite>
       <sprite>sprites\spr_results_just_ok</sprite>
+      <sprite>sprites\spr_results_just_ok_icon</sprite>
       <sprite>sprites\spr_results_superb</sprite>
     </sprites>
     <sprites name="spr_gameover">
@@ -158,6 +164,10 @@
       <sprite>sprites\spr_chatbox_blank</sprite>
       <sprite>sprites\spr_cursor_classic</sprite>
     </sprites>
+    <sprite>sprites\spr_flag</sprite>
+    <sprite>sprites\spr_finish</sprite>
+    <sprite>sprites\spr_arrow</sprite>
+    <sprite>sprites\spr_z_key</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_start_point</background>
@@ -246,6 +256,7 @@
       <object>objects\obj_results_ok</object>
       <object>objects\obj_results_just_ok</object>
       <object>objects\obj_results_superb</object>
+      <object>objects\obj_results_just_ok_icon</object>
     </objects>
     <objects name="obj_title">
       <object>objects\obj_title_static</object>
@@ -274,6 +285,11 @@
       <object>objects\obj_bun_skip</object>
       <object>objects\obj_enter_skip</object>
     </objects>
+    <object>objects\obj_flag</object>
+    <object>objects\obj_finish</object>
+    <object>objects\obj_arrow</object>
+    <object>objects\obj_z_key</object>
+    <object>objects\obj_pause</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
@@ -281,11 +297,11 @@
     <room>rooms\rm_skip_intro</room>
     <room>rooms\rm_title</room>
     <room>rooms\rm_title_transition</room>
-    <room>rooms\rm_last_cave_old</room>
-    <room>rooms\room1</room>
     <room>rooms\rm_last_cave</room>
-    <room>rooms\rm_title_old</room>
     <room>rooms\rm_results</room>
+    <room>rooms\rm_test</room>
+    <room>rooms\rm_last_cave_og</room>
+    <room>rooms\rm_title_old</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

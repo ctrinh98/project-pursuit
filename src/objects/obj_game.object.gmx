@@ -71,7 +71,9 @@ global.talking = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Battery life drain and gameover
+            <string>if (global.pause) exit;
+
+///Battery life drain and gameover
 if (global.battery &gt; 0) {
     t_b += 1;
     global.gametimems += 1;
@@ -313,6 +315,8 @@ if (global.pause == 0) {
           <argument>
             <kind>1</kind>
             <string>/// Drowning code
+
+if (global.pause) exit;
 
 if (object_exists(obj_player)) {
 
