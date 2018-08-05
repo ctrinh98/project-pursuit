@@ -95,7 +95,7 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
     EnemyExit();
 
 } else {
-
+/*
     //Face the player's direction
     x_direction = sign(x - obj_player.x | 1);
     
@@ -159,7 +159,7 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
         hspd = 0;
         vspd = 0;
     }*/
-    
+    /*
     //Gravity
     if (vspd &lt; 10) {
         vspd += grav;
@@ -212,7 +212,7 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
     
     //Move vertically
     y += vspd;
-    
+    */
     //Look for a projectile
     incoming_bullet = instance_place(x,y,obj_bullet);
     
@@ -242,7 +242,7 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
         global.gamescore += 200;
         instance_destroy();
     }
-    
+    /*
     //Look for a spur
     incoming_spur = instance_place(x,y,obj_spur_a);
     
@@ -299,7 +299,7 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
         instance_destroy();
     }
 
-
+*/
 } // global pause
 </string>
           </argument>
