@@ -159,7 +159,7 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
         hspd = 0;
         vspd = 0;
     }*/
-    /*
+    
     //Gravity
     if (vspd &lt; 10) {
         vspd += grav;
@@ -212,7 +212,7 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
     
     //Move vertically
     y += vspd;
-    */
+    
     //Look for a projectile
     incoming_bullet = instance_place(x,y,obj_bullet);
     
