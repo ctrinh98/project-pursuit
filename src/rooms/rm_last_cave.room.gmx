@@ -27,7 +27,7 @@ var _wall_sprite = sprite_create_from_surface(_surf, 0, 0, room_width, room_heig
 var _wall_inst = instance_create(0, 0, obj_wall);
 _wall_inst.sprite_index = _wall_sprite;
 _wall_inst.mask_index = _wall_inst.sprite_index;
-_wall_inst.visible = false; // Or you could keep it true!
+_wall_inst.visible = true; // Or you could keep it true!
 
 // Cleanup
 surface_reset_target();
