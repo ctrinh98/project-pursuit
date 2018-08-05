@@ -153,6 +153,12 @@
       <sprite>sprites\spr_menu_leaderboard</sprite>
       <sprite>sprites\spr_menu_options</sprite>
       <sprite>sprites\spr_title</sprite>
+      <sprite>sprites\spr_title_options</sprite>
+      <sprite>sprites\spr_title_arrow_0</sprite>
+      <sprite>sprites\spr_title_arrow_1</sprite>
+      <sprite>sprites\spr_title_arrow_2</sprite>
+      <sprite>sprites\spr_title_arrow_3</sprite>
+      <sprite>sprites\spr_title_begin</sprite>
     </sprites>
     <sprites name="spr_intro">
       <sprite>sprites\spr_intro_dialogue_black</sprite>
@@ -263,9 +269,17 @@
       <object>objects\obj_cassie_title</object>
       <object>objects\obj_player_title</object>
       <object>objects\obj_title</object>
+      <object>objects\obj_battery_medium_title</object>
+      <object>objects\obj_battery_small_title</object>
       <object>objects\obj_menu_start</object>
       <object>objects\obj_menu_options</object>
       <object>objects\obj_menu_leaderboard</object>
+      <object>objects\obj_title_arrow_0</object>
+      <object>objects\obj_title_arrow_1</object>
+      <object>objects\obj_title_arrow_2</object>
+      <object>objects\obj_title_arrow_3</object>
+      <object>objects\obj_title_options</object>
+      <object>objects\obj_title_begin</object>
     </objects>
     <objects name="obj_gameover">
       <object>objects\obj_gameover_start</object>
@@ -301,6 +315,7 @@
     <room>rooms\rm_results</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_last_cave_og</room>
+    <room>rooms\rm_title_beta</room>
     <room>rooms\rm_title_old</room>
   </rooms>
   <help>

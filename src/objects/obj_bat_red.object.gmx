@@ -147,6 +147,7 @@ if (instance_exists(incoming_bullet) &amp;&amp; enemy_hp == 1) {
     instance_create(x,y,obj_small_explosion);
     instance_create(x,y,obj_small_explosion);
     instance_create(x,y,obj_battery_small);
+    instance_create(x,y,obj_battery_small);
     instance_create(x,y,obj_big_explosion);
     instance_destroy();
 }

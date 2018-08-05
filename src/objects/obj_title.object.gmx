@@ -50,16 +50,25 @@ global.pos = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_towards_point(x,-10,1);
+            <string>/// Create main menu
+
+move_towards_point(x,-10,1);
 
 if(point_distance(x,y,x,-10) &lt;= speed) {
   y = -10;
   speed = 0;
   
   if (buttons == false) {
-    instance_create(0,0,obj_menu_start);
-    instance_create(0,0,obj_menu_options);
-    instance_create(0,0,obj_menu_leaderboard);
+//    instance_create(0,0,obj_menu_start);
+//    instance_create(0,0,obj_menu_options);
+//    instance_create(0,0,obj_menu_leaderboard);
+
+//    instance_create(0,5,obj_title_options);
+//    instance_create(0,5,obj_title_arrow_0);
+//    instance_create(0,5,obj_title_arrow_1);
+//    instance_create(0,5,obj_title_arrow_2);
+//    instance_create(0,5,obj_title_arrow_3);
+    instance_create(0,5,obj_title_begin);
     buttons = true;
   }
   
@@ -87,24 +96,24 @@ if(point_distance(x,y,x,-10) &lt;= speed) {
             <kind>1</kind>
             <string>/// Keyboard input
 
-if (instance_exists(obj_menu_start)) {
-    if (keyboard_check_pressed(vk_left)) &amp;&amp; (global.pos &gt; 0) &amp;&amp; (global.pos &lt; 2) {
+if (instance_exists(obj_title_options)) {
+    if (keyboard_check_pressed(vk_up)) &amp;&amp; (global.pos &gt; 0) &amp;&amp; (global.pos &lt; 3) {
         global.pos -= 1;
         audio_play_sound(snd_select_choose, 5, false);
-    } else if (keyboard_check_pressed(vk_right)) &amp;&amp; (global.pos &gt; 0) &amp;&amp; (global.pos &lt; 2) {
+    } else if (keyboard_check_pressed(vk_down)) &amp;&amp; (global.pos &gt; 0) &amp;&amp; (global.pos &lt; 3) {
         global.pos += 1;
         audio_play_sound(snd_select_choose, 5, false);
-    } else if (keyboard_check_pressed(vk_left)) &amp;&amp; (global.pos == 0) {
-        global.pos = 2;
+    } else if (keyboard_check_pressed(vk_up)) &amp;&amp; (global.pos == 0) {
+        global.pos = 3;
         audio_play_sound(snd_select_choose, 5, false);
-    } else if (keyboard_check_pressed(vk_right)) &amp;&amp; (global.pos == 0) {
+    } else if (keyboard_check_pressed(vk_down)) &amp;&amp; (global.pos == 0) {
         global.pos = 1;
         audio_play_sound(snd_select_choose, 5, false);
-    } else if (keyboard_check_pressed(vk_right)) &amp;&amp; (global.pos == 2) {
+    } else if (keyboard_check_pressed(vk_down)) &amp;&amp; (global.pos == 3) {
         global.pos = 0;
         audio_play_sound(snd_select_choose, 5, false);
-    } else if (keyboard_check_pressed(vk_left)) &amp;&amp; (global.pos == 2) {
-        global.pos = 1;
+    } else if (keyboard_check_pressed(vk_up)) &amp;&amp; (global.pos == 3) {
+        global.pos = 2;
         audio_play_sound(snd_select_choose, 5, false);
     }
 
@@ -115,6 +124,8 @@ if (instance_exists(obj_menu_start)) {
     } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.pos == 1) {
         audio_play_sound(snd_select_confirm, 5, false);
     } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.pos == 2) {
+        audio_play_sound(snd_select_confirm, 5, false);
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.pos == 3) {
         audio_play_sound(snd_select_confirm, 5, false);
     }
 }
