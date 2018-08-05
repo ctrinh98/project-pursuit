@@ -95,7 +95,7 @@ wobble_intensity = 3.75; // the distance multiplier (decimals are ok)
     EnemyExit();
 
 } else {
-/*
+
     //Face the player's direction
     x_direction = sign(x - obj_player.x | 1);
     

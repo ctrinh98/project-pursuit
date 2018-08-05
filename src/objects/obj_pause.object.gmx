@@ -56,7 +56,7 @@
     draw_set_font(f_chat);
     draw_set_color(c_white);
     draw_set_alpha(1);
-    draw_text(room_width/2,room_height/2,"Game Paused");
+    draw_text(view_xview/2,view_yview/2,"Game Paused");
     //draw_set_color(c_black);
 }
 </string>

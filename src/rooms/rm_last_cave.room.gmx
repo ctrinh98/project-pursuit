@@ -10,7 +10,32 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>//if (audio_is_playing(global.bgm)) audio_stop_sound(global.bgm);
+  <code>// Create surface
+var _surf = surface_create(room_width, room_height);
+surface_set_target(_surf);
+draw_clear_alpha(c_white, 0);
+
+// Draw walls
+with (obj_wall)
+{
+    draw_self();
+    instance_destroy();
+}
+
+// Create a sprite out of our surface
+var _wall_sprite = sprite_create_from_surface(_surf, 0, 0, room_width, room_height, true, false, 0, 0);
+var _wall_inst = instance_create(0, 0, obj_wall);
+_wall_inst.sprite_index = _wall_sprite;
+_wall_inst.mask_index = _wall_inst.sprite_index;
+_wall_inst.visible = false; // Or you could keep it true!
+
+// Cleanup
+surface_reset_target();
+surface_free(_surf);
+
+
+
+//if (audio_is_playing(global.bgm)) audio_stop_sound(global.bgm);
 //global.bgm = bgm_last_cave;
 //if (!audio_is_playing(global.bgm)) audio_play_sound(global.bgm,100,true);
 
