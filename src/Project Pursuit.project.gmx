@@ -36,6 +36,7 @@
     <sound>sound\snd_results_statement</sound>
     <sound>sound\snd_results_ok</sound>
     <sound>sound\bgm_results_ok</sound>
+    <sound>sound\snd_press_ground</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="spr_player">
@@ -314,9 +315,9 @@
     <room>rooms\rm_title_transition</room>
     <room>rooms\rm_last_cave</room>
     <room>rooms\rm_results</room>
-    <room>rooms\rm_test</room>
     <room>rooms\rm_last_cave_og</room>
     <room>rooms\rm_last_cave_beta</room>
+    <room>rooms\rm_test</room>
     <room>rooms\rm_title_beta</room>
     <room>rooms\rm_title_old</room>
   </rooms>

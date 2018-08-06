@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>mode = 0;
+ground = false;
 
 </string>
           </argument>
@@ -52,6 +53,7 @@
             <string>mode = 4;
 vspeed = -1.2;
 image_index = 0;
+ground = false;
 </string>
           </argument>
         </arguments>
@@ -140,6 +142,12 @@ if (vspeed &gt;= 2.5) {
 
 if (place_meeting(x, y+1, obj_collision)) {
     if (mode = 2) {
+        if (ground == false) {
+            audio_play_sound(snd_press_ground, 5, false);
+            instance_create(x+8,y+18,obj_small_explosion);
+            instance_create(x+8,y+18,obj_small_explosion);
+            ground = true;
+        }
         mode = 3;
         gravity = 0;
         alarm[0] = 30;

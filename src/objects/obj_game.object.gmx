@@ -322,11 +322,11 @@ if (global.pause == 0) {
         draw_text(view_xview + 76,view_yview + 30,obj_player.TotalShots);
     }
     
-    draw_set_font(global.font_number);
-    draw_text(view_xview + 250, view_yview + 20, global.gametimem);
-    draw_text(view_xview + 275, view_yview + 20, global.gametimes);
-    draw_text(view_xview + 300, view_yview + 20, global.gametimems);
-    draw_text(view_xview + 270, view_yview + 30, global.gamescore);
+    draw_set_font(f_default);
+    draw_text(view_xview + 250, view_yview + 20, string(global.gametimem) + "' " + string(global.gametimes) + "'" + "' " + string(global.gametimems));
+//    draw_text(view_xview + 275, view_yview + 20, global.gametimes);
+//    draw_text(view_xview + 300, view_yview + 20, global.gametimems);
+    draw_text(view_xview + 250, view_yview + 30, global.gamescore);
 
 }
 
