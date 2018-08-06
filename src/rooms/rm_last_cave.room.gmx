@@ -715,6 +715,33 @@ var global.roomname = "Last Cave";</code>
     <instance objName="obj_wall" x="1440" y="810" name="inst_DAE68491" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1140" y="405" name="inst_DAF83F57" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="900" y="585" name="inst_A91F3EBE" locked="0" code="" scaleX="2" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="135" y="540" name="inst_DC4196EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="90" y="570" name="inst_8CBAC02E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="105" y="495" name="inst_4AB981E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="210" y="555" name="inst_232E7733" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="315" y="525" name="inst_D9971042" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="375" y="525" name="inst_FA1349F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="345" y="540" name="inst_43AB9799" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="405" y="495" name="inst_39183867" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="480" y="495" name="inst_524B6CA1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="495" y="555" name="inst_98E7CF4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="570" y="495" name="inst_4D08AC7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="600" y="570" name="inst_D9277AEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="660" y="525" name="inst_6DA3C713" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="660" y="570" name="inst_BB6744C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="750" y="495" name="inst_E5C71CD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="750" y="555" name="inst_E522AB48" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="780" y="495" name="inst_F103CA71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="720" y="510" name="inst_CF3F3C68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="870" y="510" name="inst_22145734" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="945" y="450" name="inst_7196738E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="930" y="525" name="inst_E45EE8AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="1035" y="435" name="inst_F4753CF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="1110" y="510" name="inst_A9DC257E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="1170" y="435" name="inst_55D8A481" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="1200" y="555" name="inst_1D75B973" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="1275" y="450" name="inst_AEF19D3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bat_red" x="1290" y="555" name="inst_0FC63720" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tileset_last_cave" x="225" y="45" w="15" h="15" xo="180" yo="45" id="10012139" name="inst_3670F329" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
