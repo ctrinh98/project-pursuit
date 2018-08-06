@@ -42,6 +42,8 @@ global.gamescore = 0;
 global.gametimem = 0;
 global.gametimes = 0;
 global.gametimems = 0;
+global.fpscounter = 0;
+fpsdebug = "";
 
 //Warp variables
 obj_player.player_x = obj_player.xstart;
@@ -121,6 +123,41 @@ if (global.battery &gt; 0) {
             <string>//Variables
 obj_player.player_x = obj_player.xstart;
 obj_player.player_y = obj_player.ystart;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.fpscounter ++;
+
+draw_set_font(f_default);
+draw_set_color(c_white);
+draw_text(10, 5, "FPS = " + fpsdebug);
+show_debug_message(fpsdebug);
+
+if (global.fpscounter &gt;= 50) {
+
+    fpsdebug = string(fps_real);
+    global.fpscounter = 0;
+
+}
 </string>
           </argument>
         </arguments>
