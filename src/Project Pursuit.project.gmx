@@ -174,6 +174,7 @@
     <sprite>sprites\spr_finish</sprite>
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_z_key</sprite>
+    <sprite>sprites\spr_hazard</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_start_point</background>
@@ -315,6 +316,7 @@
     <room>rooms\rm_results</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_last_cave_og</room>
+    <room>rooms\rm_last_cave_beta</room>
     <room>rooms\rm_title_beta</room>
     <room>rooms\rm_title_old</room>
   </rooms>
