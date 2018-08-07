@@ -52,7 +52,9 @@ image_speed = 0.3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//We measure acceleration in speed lost per second, so room_speed factors into it twice
+            <string>if (global.pause) exit;
+
+//We measure acceleration in speed lost per second, so room_speed factors into it twice
 
 //Deceleration is for when we're blowing up
 deceleration = 800 / (room_speed * room_speed)

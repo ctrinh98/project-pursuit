@@ -2,6 +2,7 @@
 global.gameWidth = 320;
 global.gameHeight = 240;
 global.zoom = 2;
+global.title = false;
 surface_resize(application_surface, global.gameWidth, global.gameHeight);
 display_reset(0, false);
 global.font = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!?.:;,abcdefghijklmnopqrstuvwxyz" + '"' + "'%/\()[]{}+-=0123456789|&<>^*@_$#`~", false, 0);

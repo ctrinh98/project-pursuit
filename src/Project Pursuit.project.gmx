@@ -177,6 +177,10 @@
     <sprite>sprites\spr_z_key</sprite>
     <sprite>sprites\spr_hazard</sprite>
     <sprite>sprites\spr_hud_fix_cover</sprite>
+    <sprite>sprites\spr_title_options_base_0</sprite>
+    <sprite>sprites\spr_title_options_base_1</sprite>
+    <sprite>sprites\spr_title_options_base_2</sprite>
+    <sprite>sprites\spr_title_options_base_3</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_start_point</background>
@@ -277,6 +281,7 @@
       <object>objects\obj_cassie_title</object>
       <object>objects\obj_player_title</object>
       <object>objects\obj_title</object>
+      <object>objects\obj_title_options_controller</object>
       <object>objects\obj_battery_medium_title</object>
       <object>objects\obj_battery_small_title</object>
       <object>objects\obj_menu_start</object>
@@ -288,6 +293,10 @@
       <object>objects\obj_title_arrow_3</object>
       <object>objects\obj_title_options</object>
       <object>objects\obj_title_begin</object>
+      <object>objects\obj_title_options_base_0</object>
+      <object>objects\obj_title_options_base_1</object>
+      <object>objects\obj_title_options_base_2</object>
+      <object>objects\obj_title_options_base_3</object>
     </objects>
     <objects name="obj_gameover">
       <object>objects\obj_gameover_start</object>
