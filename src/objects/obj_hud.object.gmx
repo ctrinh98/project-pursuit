@@ -4,130 +4,10 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-1515752192</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//InitGame();
-global.pause = 0;
-global.door_opened = false;
-global.transition_black = false;
-global.money = 000;
-global.save_prompt = false;
-global.battery = 75;
-global.battery_max = 100;
-image_speed = 0.05;
-//global.bgm = bgm_gestation;
-t_b = 0;
-draw_set_color(c_white);
-global.gameover = false;
-global.gamescore = 0;
-global.gametimem = 0;
-global.gametimes = 0;
-global.gametimems = 0;
-global.fpscounter = 0;
-global.fpsdebug = "";
-
-//Warp variables
-obj_player.player_x = obj_player.xstart;
-obj_player.player_y = obj_player.ystart;
-
-//Prevent dialogue box overlap
-global.talking = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (global.pause) exit;
-
-///Battery life drain and gameover
-if (global.battery &gt; 0) {
-    t_b += 1;
-    global.gametimems += 1;
-    if (t_b &gt;= 60) {
-        global.battery -= 1;
-        global.gametimes += 1;
-        global.gametimems = 0;
-        if (global.gametimes == 60) {
-            global.gametimem += 1;
-            global.gametimes = 0; 
-        }
-        t_b = 0;
-    }
-} else if (global.battery == 0) {
-    if (global.gameover == false) {
-        global.pause = 1;
-        audio_play_sound(snd_player_death,5,false);
-        instance_create(view_xview, view_yview,obj_gameover_start);
-        global.gameover = true;
-    }
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Variables
-obj_player.player_x = obj_player.xstart;
-obj_player.player_y = obj_player.ystart;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
@@ -149,7 +29,7 @@ obj_player.player_y = obj_player.ystart;
 
 draw_set_font(f_default);
 draw_set_color(c_white);
-draw_text(50, 5, "FPS = " + global.fpsdebug);
+draw_text(20, 5, "FPS = " + global.fpsdebug);
 show_debug_message(global.fpsdebug);
 
 if (global.fpscounter &gt;= 20) {
@@ -164,109 +44,6 @@ if (global.fpscounter &gt;= 20) {
       </action>
     </event>
     <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw global HUD
-
-/*
-
-if (object_exists(obj_player)) {
-
-    if (global.pause == 0) {
-    
-        if (global.damage_flash == 0) {
-            draw_sprite_ext(spr_health_bar,0,view_xview + 40,view_yview + 44,1,1,0,c_white,0);
-            draw_sprite_ext(spr_health_color,0,view_xview + 40,view_yview + 44,global.player_hp/global.player_max_hp,1,0,c_white,0);
-            draw_sprite_ext(spr_battery_color,0,view_xview + 40,view_yview + 52,global.battery/global.battery_max,1,0,c_white,0);
-        } else {
-            if (obj_player.SelectedWeaponIndex == 0 &amp;&amp; obj_player.WeaponCount &gt; 0) {
-                draw_sprite(spr_bar_gun,0,view_xview + 40,view_yview + 44);
-            } else if (obj_player.SelectedWeaponIndex == 1 &amp;&amp; obj_player.WeaponCount &gt; 1) {
-                draw_sprite(spr_bar_machine,0,view_xview + 40,view_yview + 44);
-            }
-            draw_sprite(spr_health_bar,0,view_xview + 40,view_yview + 44);
-            draw_sprite_ext(spr_health_color,0,view_xview + 40,view_yview + 44,global.player_hp/global.player_max_hp,1,0,c_white,1);
-            draw_sprite_ext(spr_battery_color,0,view_xview + 40,view_yview + 52,global.battery/global.battery_max,1,0,c_white,1);
-            draw_set_font(global.font_hud);
-            if (global.player_hp &gt; 9) {
-                draw_text(view_xview + 28,view_yview + 46, global.player_hp);
-            } else {
-                draw_text(view_xview + 28,view_yview + 46, global.player_hp);
-            }
-            //draw_set_font(global.font_number);
-            if (global.battery &gt; 99) {
-                draw_text(view_xview + 32,view_yview + 54, global.battery);
-            } else if (global.battery &gt; 9) {
-    //            draw_text(view_xview + 32,view_yview + 54, 0);
-                draw_text(view_xview + 28,view_yview + 54, global.battery);
-            } else {
-    //            draw_text(view_xview + 32,view_yview + 54, 0);
-                draw_text(view_xview + 28,view_yview + 54, 0);
-                draw_text(view_xview + 36,view_yview + 54, global.battery);
-            }
-        }    
-    }
-
-}
-
-*/
-
-if (object_exists(obj_player)) {
-
-if (global.pause == 0) {
-
-    if (global.damage_flash == 0) {
-        draw_sprite_ext(spr_health_bar,0,view_xview + 40,view_yview + 44,1,1,0,c_white,0);
-        draw_sprite_ext(spr_health_color,0,view_xview + 40,view_yview + 44,global.player_hp/global.player_max_hp,1,0,c_white,0);
-        draw_sprite_ext(spr_battery_color,0,view_xview + 40,view_yview + 52,global.battery/global.battery_max,1,0,c_white,0);
-    } else {
-        if (obj_player.SelectedWeaponIndex == 0 &amp;&amp; obj_player.WeaponCount &gt; 0) {
-            draw_sprite(spr_bar_gun,0,view_xview + 40,view_yview + 44);
-        } else if (obj_player.SelectedWeaponIndex == 1 &amp;&amp; obj_player.WeaponCount &gt; 1) {
-            draw_sprite(spr_bar_machine,0,view_xview + 40,view_yview + 44);
-        }
-        draw_sprite(spr_health_bar,0,view_xview + 40,view_yview + 44);
-        draw_sprite_ext(spr_health_color,0,view_xview + 40,view_yview + 44,global.player_hp/global.player_max_hp,1,0,c_white,1);
-        draw_sprite_ext(spr_battery_color,0,view_xview + 40,view_yview + 52,global.battery/global.battery_max,1,0,c_white,1);
-        draw_set_font(global.font_hud);
-        if (global.player_hp &gt; 9) {
-            draw_text(view_xview + 36,view_yview + 46, global.player_hp);
-        } else {
-            draw_text(view_xview + 40,view_yview + 46, global.player_hp);
-        }
-        //draw_set_font(global.font_number);
-        if (global.battery &gt; 99) {
-            draw_text(view_xview + 40,view_yview + 54, global.battery);
-        } else if (global.battery &gt; 9) {
-//            draw_text(view_xview + 32,view_yview + 54, 0);
-            draw_text(view_xview + 36,view_yview + 54, global.battery);
-        } else {
-//            draw_text(view_xview + 32,view_yview + 54, 0);
-            draw_text(view_xview + 32,view_yview + 54, 0);
-            draw_text(view_xview + 40,view_yview + 54, global.battery);
-        }
-    }    
-}
-
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -452,8 +229,6 @@ if (global.gameover) {
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="9" enumb="16">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -470,10 +245,89 @@ if (global.gameover) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(instance_count);
-show_debug_message(instance_number(obj_wall));
-show_debug_message(instance_number(obj_spikes_n));
+            <string>/// Draw global HUD
 
+/*
+
+if (object_exists(obj_player)) {
+
+    if (global.pause == 0) {
+    
+        if (global.damage_flash == 0) {
+            draw_sprite_ext(spr_health_bar,0,view_xview + 40,view_yview + 44,1,1,0,c_white,0);
+            draw_sprite_ext(spr_health_color,0,view_xview + 40,view_yview + 44,global.player_hp/global.player_max_hp,1,0,c_white,0);
+            draw_sprite_ext(spr_battery_color,0,view_xview + 40,view_yview + 52,global.battery/global.battery_max,1,0,c_white,0);
+        } else {
+            if (obj_player.SelectedWeaponIndex == 0 &amp;&amp; obj_player.WeaponCount &gt; 0) {
+                draw_sprite(spr_bar_gun,0,view_xview + 40,view_yview + 44);
+            } else if (obj_player.SelectedWeaponIndex == 1 &amp;&amp; obj_player.WeaponCount &gt; 1) {
+                draw_sprite(spr_bar_machine,0,view_xview + 40,view_yview + 44);
+            }
+            draw_sprite(spr_health_bar,0,view_xview + 40,view_yview + 44);
+            draw_sprite_ext(spr_health_color,0,view_xview + 40,view_yview + 44,global.player_hp/global.player_max_hp,1,0,c_white,1);
+            draw_sprite_ext(spr_battery_color,0,view_xview + 40,view_yview + 52,global.battery/global.battery_max,1,0,c_white,1);
+            draw_set_font(global.font_hud);
+            if (global.player_hp &gt; 9) {
+                draw_text(view_xview + 28,view_yview + 46, global.player_hp);
+            } else {
+                draw_text(view_xview + 28,view_yview + 46, global.player_hp);
+            }
+            //draw_set_font(global.font_number);
+            if (global.battery &gt; 99) {
+                draw_text(view_xview + 32,view_yview + 54, global.battery);
+            } else if (global.battery &gt; 9) {
+    //            draw_text(view_xview + 32,view_yview + 54, 0);
+                draw_text(view_xview + 28,view_yview + 54, global.battery);
+            } else {
+    //            draw_text(view_xview + 32,view_yview + 54, 0);
+                draw_text(view_xview + 28,view_yview + 54, 0);
+                draw_text(view_xview + 36,view_yview + 54, global.battery);
+            }
+        }    
+    }
+
+}
+
+*/
+
+if (object_exists(obj_player)) {
+
+if (global.pause == 0) {
+
+    if (global.damage_flash == 0) {
+        draw_sprite_ext(spr_health_bar,0,view_xview + 40,view_yview + 44,1,1,0,c_white,0);
+        draw_sprite_ext(spr_health_color,0,view_xview + 40,view_yview + 44,global.player_hp/global.player_max_hp,1,0,c_white,0);
+        draw_sprite_ext(spr_battery_color,0,view_xview + 40,view_yview + 52,global.battery/global.battery_max,1,0,c_white,0);
+    } else {
+        if (obj_player.SelectedWeaponIndex == 0 &amp;&amp; obj_player.WeaponCount &gt; 0) {
+            draw_sprite(spr_bar_gun,0,view_xview + 40,view_yview + 44);
+        } else if (obj_player.SelectedWeaponIndex == 1 &amp;&amp; obj_player.WeaponCount &gt; 1) {
+            draw_sprite(spr_bar_machine,0,view_xview + 40,view_yview + 44);
+        }
+        draw_sprite(spr_health_bar,0,view_xview + 40,view_yview + 44);
+        draw_sprite_ext(spr_health_color,0,view_xview + 40,view_yview + 44,global.player_hp/global.player_max_hp,1,0,c_white,1);
+        draw_sprite_ext(spr_battery_color,0,view_xview + 40,view_yview + 52,global.battery/global.battery_max,1,0,c_white,1);
+        draw_set_font(global.font_hud);
+        if (global.player_hp &gt; 9) {
+            draw_text(view_xview + 36,view_yview + 46, global.player_hp);
+        } else {
+            draw_text(view_xview + 40,view_yview + 46, global.player_hp);
+        }
+        //draw_set_font(global.font_number);
+        if (global.battery &gt; 99) {
+            draw_text(view_xview + 40,view_yview + 54, global.battery);
+        } else if (global.battery &gt; 9) {
+//            draw_text(view_xview + 32,view_yview + 54, 0);
+            draw_text(view_xview + 36,view_yview + 54, global.battery);
+        } else {
+//            draw_text(view_xview + 32,view_yview + 54, 0);
+            draw_text(view_xview + 32,view_yview + 54, 0);
+            draw_text(view_xview + 40,view_yview + 54, global.battery);
+        }
+    }    
+}
+
+}
 </string>
           </argument>
         </arguments>

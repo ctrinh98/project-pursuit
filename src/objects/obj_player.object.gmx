@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>spr_player_mask</maskName>
   <events>
@@ -774,8 +774,10 @@ if (place_meeting(x,y,obj_water)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = player_x;
+            <string>/*
+x = player_x;
 y = player_y;
+*/
 </string>
           </argument>
         </arguments>

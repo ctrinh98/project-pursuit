@@ -176,6 +176,7 @@
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_z_key</sprite>
     <sprite>sprites\spr_hazard</sprite>
+    <sprite>sprites\spr_hud_fix_cover</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_start_point</background>
@@ -196,6 +197,7 @@
   <objects name="objects">
     <objects name="obj_fundamental">
       <object>objects\obj_game</object>
+      <object>objects\object93</object>
       <object>objects\obj_player</object>
       <object>objects\obj_test_controller</object>
       <object>objects\obj_collision</object>
@@ -205,6 +207,7 @@
       <object>objects\obj_camera_skip_intro</object>
       <object>objects\obj_transition</object>
       <object>objects\obj_dialogue_intro</object>
+      <object>objects\obj_hud</object>
     </objects>
     <objects name="obj_collision">
       <object>objects\obj_wall</object>
@@ -231,6 +234,9 @@
       <object>objects\obj_sprites_s</object>
       <object>objects\obj_sprites_w</object>
       <object>objects\obj_press</object>
+      <object>objects\obj_lava</object>
+      <object>objects\obj_lava_damage</object>
+      <object>objects\obj_lava_droplet</object>
     </objects>
     <objects name="obj_animation">
       <object>objects\obj_collide_ceiling</object>
@@ -305,7 +311,9 @@
     <object>objects\obj_finish</object>
     <object>objects\obj_arrow</object>
     <object>objects\obj_z_key</object>
+    <object>objects\obj_hud_fix</object>
     <object>objects\obj_pause</object>
+    <object>objects\obj_hud_fix_cover</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>

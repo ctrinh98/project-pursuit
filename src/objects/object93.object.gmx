@@ -43,7 +43,7 @@ global.gametimem = 0;
 global.gametimes = 0;
 global.gametimems = 0;
 global.fpscounter = 0;
-global.fpsdebug = "";
+fpsdebug = "";
 
 //Warp variables
 obj_player.player_x = obj_player.xstart;
@@ -149,12 +149,12 @@ obj_player.player_y = obj_player.ystart;
 
 draw_set_font(f_default);
 draw_set_color(c_white);
-draw_text(50, 5, "FPS = " + global.fpsdebug);
-show_debug_message(global.fpsdebug);
+draw_text(20, 5, "FPS = " + fpsdebug);
+show_debug_message(fpsdebug);
 
-if (global.fpscounter &gt;= 20) {
+if (global.fpscounter &gt;= 50) {
 
-    global.fpsdebug = string(fps_real);
+    fpsdebug = string(fps_real);
     global.fpscounter = 0;
 
 }
