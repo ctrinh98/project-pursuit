@@ -174,13 +174,25 @@
     <sprite>sprites\spr_flag</sprite>
     <sprite>sprites\spr_finish</sprite>
     <sprite>sprites\spr_arrow</sprite>
-    <sprite>sprites\spr_z_key</sprite>
+    <sprite>sprites\spr_z_key_old</sprite>
     <sprite>sprites\spr_hazard</sprite>
     <sprite>sprites\spr_hud_fix_cover</sprite>
     <sprite>sprites\spr_title_options_base_0</sprite>
     <sprite>sprites\spr_title_options_base_1</sprite>
     <sprite>sprites\spr_title_options_base_2</sprite>
     <sprite>sprites\spr_title_options_base_3</sprite>
+    <sprite>sprites\spr_zkey</sprite>
+    <sprite>sprites\spr_leaderboard</sprite>
+    <sprite>sprites\spr_options_select_00</sprite>
+    <sprite>sprites\spr_options_select_01</sprite>
+    <sprite>sprites\spr_options_select_02</sprite>
+    <sprite>sprites\spr_options_select_03</sprite>
+    <sprite>sprites\spr_options_select_10</sprite>
+    <sprite>sprites\spr_options_select_11</sprite>
+    <sprite>sprites\spr_options_select_20</sprite>
+    <sprite>sprites\spr_options_select_21</sprite>
+    <sprite>sprites\spr_options_select_30</sprite>
+    <sprite>sprites\spr_options_select_31</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_start_point</background>
@@ -193,6 +205,11 @@
     <script>scripts\InitGame.gml</script>
     <script>scripts\EnemyExit.gml</script>
     <script>scripts\newIntro.gml</script>
+    <script>scripts\send_score.gml</script>
+    <script>scripts\url_encode.gml</script>
+    <script>scripts\get_scores.gml</script>
+    <script>scripts\draw_text_highscore.gml</script>
+    <script>scripts\string_split.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_chat</font>
@@ -281,7 +298,6 @@
       <object>objects\obj_cassie_title</object>
       <object>objects\obj_player_title</object>
       <object>objects\obj_title</object>
-      <object>objects\obj_title_options_controller</object>
       <object>objects\obj_battery_medium_title</object>
       <object>objects\obj_battery_small_title</object>
       <object>objects\obj_menu_start</object>
@@ -297,6 +313,12 @@
       <object>objects\obj_title_options_base_1</object>
       <object>objects\obj_title_options_base_2</object>
       <object>objects\obj_title_options_base_3</object>
+      <object>objects\obj_leaderboard</object>
+      <object>objects\obj_title_options_controller</object>
+      <object>objects\obj_options_select_0</object>
+      <object>objects\obj_options_select_1</object>
+      <object>objects\obj_options_select_2</object>
+      <object>objects\obj_options_select_3</object>
     </objects>
     <objects name="obj_gameover">
       <object>objects\obj_gameover_start</object>
@@ -319,10 +341,12 @@
     <object>objects\obj_flag</object>
     <object>objects\obj_finish</object>
     <object>objects\obj_arrow</object>
-    <object>objects\obj_z_key</object>
+    <object>objects\obj_zkey</object>
     <object>objects\obj_hud_fix</object>
     <object>objects\obj_pause</object>
     <object>objects\obj_hud_fix_cover</object>
+    <object>objects\obj_highscores</object>
+    <object>objects\obj_send_in</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>

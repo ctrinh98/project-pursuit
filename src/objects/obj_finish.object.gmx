@@ -27,11 +27,12 @@
             <kind>1</kind>
             <string>//If there is one
 if instance_exists(instance_place(x-4,y,obj_player)) {
-    instance_create(x,y,obj_bullet_collide);
+    //instance_create(x,y,obj_bullet_collide);
     if (audio_is_playing(global.bgm)) audio_stop_sound(global.bgm);
     if (audio_is_playing(global.static)) audio_stop_sound(global.static);
     with (obj_game) instance_destroy();
     global.door_opened = true;
+    global.gameover = true;
 }
 </string>
           </argument>

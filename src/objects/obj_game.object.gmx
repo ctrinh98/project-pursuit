@@ -149,7 +149,11 @@ obj_player.player_y = obj_player.ystart;
 
 draw_set_font(f_default);
 draw_set_color(c_white);
-draw_text(50, 5, "FPS = " + global.fpsdebug);
+if (global.showfps == true) {
+    draw_text(50, 5, "FPS = " + global.fpsdebug);
+} else {
+    draw_text(50,5,"");
+}
 show_debug_message(global.fpsdebug);
 
 if (global.fpscounter &gt;= 20) {
@@ -323,11 +327,19 @@ if (global.pause == 0) {
     }
     
     draw_set_font(f_default);
-    draw_text(view_xview + 250, view_yview + 20, string(global.gametimem) + "' " + string(global.gametimes) + "'" + "' " + string(global.gametimems));
+    if (global.showtime == true) {
+        draw_text(view_xview + 250, view_yview + 20, string(global.gametimem) + "' " + string(global.gametimes) + "'" + "' " + string(global.gametimems));
+    } else {
+        draw_text(0,0,"");
+    }
 //    draw_text(view_xview + 275, view_yview + 20, global.gametimes);
 //    draw_text(view_xview + 300, view_yview + 20, global.gametimems);
-    draw_text(view_xview + 250, view_yview + 30, global.gamescore);
-
+    if (global.showscore == true) {
+        draw_text(view_xview + 250, view_yview + 30, global.gamescore);
+    } else {
+        draw_text(0,0,"");
+    }
+    
 }
 
 }

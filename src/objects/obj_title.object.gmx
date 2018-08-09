@@ -131,10 +131,27 @@ if (instance_exists(obj_title_options)) {
         instance_create(0,5,obj_title_options_base_1);
         instance_create(0,5,obj_title_options_base_2);
         instance_create(0,5,obj_title_options_base_3);
+        instance_create(0,5,obj_options_select_0);
+        instance_create(0,5,obj_options_select_1);
+        instance_create(0,5,obj_options_select_2);
+        instance_create(0,5,obj_options_select_3);
         instance_destroy();
     } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.pos == 3) {
-        audio_play_sound(snd_select_confirm, 5, false);
+        audio_play_sound(snd_select_choose, 5, false);
+        instance_create(0,0,obj_leaderboard);
+        instance_create(0,0,obj_highscores);
+        instance_create(0,0,obj_send_in);
+        instance_destroy();
+    } else if (keyboard_check_pressed(ord('X'))) {
+        audio_play_sound(snd_select_choose, 5, false);
+        with (obj_title_options) instance_destroy();
+        with (obj_title_arrow_0) instance_destroy();
+        with (obj_title_arrow_1) instance_destroy();
+        with (obj_title_arrow_2) instance_destroy();
+        with (obj_title_arrow_3) instance_destroy();
+        instance_create(0,5,obj_title_begin);
     }
+    
 }
 </string>
           </argument>
@@ -159,6 +176,9 @@ if (instance_exists(obj_title_options)) {
           <argument>
             <kind>1</kind>
             <string>//draw_text(5,5,global.pos);
+draw_set_font(f_default);
+draw_set_color(c_white);
+//draw_text(5,5,global.zoom);
 </string>
           </argument>
         </arguments>

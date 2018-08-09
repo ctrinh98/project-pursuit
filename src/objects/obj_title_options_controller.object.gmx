@@ -73,14 +73,36 @@ if (instance_exists(obj_title_options_controller)) {
         audio_play_sound(snd_select_choose, 5, false);
     }
 
-    if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 0) {
+    if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 0) &amp;&amp; (global.zoom == 1) {
         audio_play_sound(snd_select_choose, 5, false);
-    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 1) {
+        global.zoom = 2;
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 0) &amp;&amp; (global.zoom == 2) {
         audio_play_sound(snd_select_choose, 5, false);
-    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 2) {
+        global.zoom = 3;
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 0) &amp;&amp; (global.zoom == 3) {
         audio_play_sound(snd_select_choose, 5, false);
-    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 3) {
+        global.zoom = 4;
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 0) &amp;&amp; (global.zoom == 4) {
         audio_play_sound(snd_select_choose, 5, false);
+        global.zoom = 1;
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 1) &amp;&amp; (global.showfps == true) {
+        audio_play_sound(snd_select_choose, 5, false);
+        global.showfps = false;
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 1) &amp;&amp; (global.showfps == false) {
+        audio_play_sound(snd_select_choose, 5, false);
+        global.showfps = true;
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 2) &amp;&amp; (global.showtime == true) {
+        audio_play_sound(snd_select_choose, 5, false);
+        global.showtime = false;
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 2) &amp;&amp; (global.showtime == false) {
+        audio_play_sound(snd_select_choose, 5, false);
+        global.showtime = true;
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 3) &amp;&amp; (global.showscore == true) {
+        audio_play_sound(snd_select_choose, 5, false);
+        global.showscore = false;
+    } else if (keyboard_check_pressed(ord('Z'))) &amp;&amp; (global.opos == 3) &amp;&amp; (global.showscore == false) {
+        audio_play_sound(snd_select_choose, 5, false);
+        global.showscore = true;
     }
     
     if (keyboard_check_pressed(ord('X'))) {
@@ -91,6 +113,10 @@ if (instance_exists(obj_title_options_controller)) {
         instance_create(0,5,obj_title_arrow_1);
         instance_create(0,5,obj_title_arrow_2);
         instance_create(0,5,obj_title_arrow_3);
+        with (obj_options_select_0) instance_destroy();
+        with (obj_options_select_1) instance_destroy();
+        with (obj_options_select_2) instance_destroy();
+        with (obj_options_select_3) instance_destroy();
         instance_destroy();
     }
 }

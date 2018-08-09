@@ -32,6 +32,7 @@ c2 = false;
 c3 = false;
 c4 = false;
 c5 = false;
+c6 = false;
 </string>
           </argument>
         </arguments>
@@ -62,22 +63,26 @@ if (timer &gt;= 50) &amp;&amp; (c0 == false) {
     c0 = true;
 }
 
-if (timer &gt;= 150) &amp;&amp; (c3 == false) {
+if (timer &gt;= 120) &amp;&amp; (c3 == false) {
     audio_play_sound(snd_results_statement, 5, false);
     instance_create(0,0,obj_results_just_ok)
     c3 = true;
 }
 
-if (timer &gt;= 270) &amp;&amp; (c4 == false) {
+if (timer &gt;= 240) &amp;&amp; (c4 == false) {
     audio_play_sound(snd_results_ok, 5, false);
     instance_create(0,0,obj_results_just_ok_icon)
     c4 = true;
 }
 
-if (timer &gt;= 300) &amp;&amp; (c5 == false) {
+if (timer &gt;= 270) &amp;&amp; (c5 == false) {
     audio_play_sound(bgm_results_ok, 5, false);
-    instance_create(50,190,obj_z_key);
     c5 = true;
+}
+
+if (timer &gt;= 350) &amp;&amp; (c6 == false) {
+    instance_create(153,197,obj_zkey);
+    c6 = true;
 }
 </string>
           </argument>
