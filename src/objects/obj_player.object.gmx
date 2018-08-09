@@ -625,6 +625,7 @@ if (xprevious &lt; x) {
 
 enemy_exist = instance_place(x,y,obj_critter_red);
 bat_exist = instance_place(x,y,obj_bat_red);
+press_exist = instance_place(x,y,obj_press);
 spike_exist = instance_place(x,y,obj_spikes);
 
 if (instance_exists(enemy_exist) &amp;&amp; hit_by_enemy == false &amp;&amp; global.player_hp &lt;= 6) {
@@ -638,6 +639,7 @@ if (instance_exists(enemy_exist) &amp;&amp; hit_by_enemy == false &amp;&amp; glo
 //    audio_sound_gain(global.static, 0.0, 0);
     audio_stop_sound(global.bgm);
     audio_stop_sound(global.static);
+    audio_stop_sound(bgm_static);
     if (global.gameover == false) {
         global.pause = 1;
         audio_play_sound(snd_player_death,5,false);
@@ -671,6 +673,7 @@ if (instance_exists(bat_exist) &amp;&amp; hit_by_enemy == false &amp;&amp; globa
 //    audio_sound_gain(global.static, 0.0, 0);
     audio_stop_sound(global.bgm);
     audio_stop_sound(global.static);
+    audio_stop_sound(bgm_static);
     if (global.gameover == false) {
         global.pause = 1;
         audio_play_sound(snd_player_death,5,false);
@@ -693,9 +696,34 @@ if (instance_exists(bat_exist) &amp;&amp; hit_by_enemy == false &amp;&amp; globa
     }
 }
 
+if (instance_exists(press_exist) &amp;&amp; hit_by_enemy == false &amp;&amp; global.player_hp &gt;= 1) {
+//    audio_stop_sound(global.bgm);
+    dmgtext = "-127";
+    hit_by_enemy = true;
+    t_dmg = 80;
+    sprite_index = spr_blank;
+    global.pause = 1;
+    global.player_hp = 0;
+//    for (var i = 0; i &lt; 40; i++) {
+//        instance_create(random_range(x-30,x+30),random_range(y-30,y+30),obj_player_death);
+//    }
+//    audio_sound_gain(global.static, 0.0, 0);
+    audio_stop_sound(global.bgm);
+    audio_stop_sound(global.static);
+    audio_stop_sound(bgm_static);
+    if (global.gameover == false) {
+        global.pause = 1;
+        audio_play_sound(snd_player_death,5,false);
+        instance_create(view_xview, view_yview,obj_gameover_start);
+        global.gameover = true;
+    }
+
+} 
+
 if (instance_exists(spike_exist) &amp;&amp; hit_by_enemy == false &amp;&amp; global.player_hp &lt;= 5) {
     audio_stop_sound(global.bgm);
     audio_stop_sound(global.static);
+    audio_stop_sound(bgm_static);
     sprite_index = spr_blank;
     global.pause = 1;
     global.player_hp = 0;

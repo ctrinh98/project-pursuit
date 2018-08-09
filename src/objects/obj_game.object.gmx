@@ -31,7 +31,7 @@ global.door_opened = false;
 global.transition_black = false;
 global.money = 000;
 global.save_prompt = false;
-global.battery = 75;
+global.battery = 60;
 global.battery_max = 100;
 image_speed = 0.05;
 //global.bgm = bgm_gestation;
@@ -92,6 +92,8 @@ if (global.battery &gt; 0) {
 } else if (global.battery == 0) {
     if (global.gameover == false) {
         global.pause = 1;
+        audio_stop_sound(global.bgm);
+        audio_stop_sound(global.static);
         audio_play_sound(snd_player_death,5,false);
         instance_create(view_xview, view_yview,obj_gameover_start);
         global.gameover = true;

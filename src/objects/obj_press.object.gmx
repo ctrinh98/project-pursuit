@@ -76,83 +76,95 @@ ground = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// image_speed
-
-image_speed = 0;
-
-if (y &lt; obj_player.y) {
-
-    // which side are we looking at
-    /*
-    if (x &gt; obj_player.x) {
-        image_xscale = 1;
-    } else {
-        image_xscale = -1;
-    }
-    */
-    
-    // calculate the distance
-    
-    if (point_distance(self.x+8, self.y, obj_player.x, self.y) &gt;= 36) {
-        if (y = ystart) {
-            image_index = 0;
-        }
-    }
-    
-    if (point_distance(self.x+8, self.y, obj_player.x, self.y) &lt; 36) {
-        if (y = ystart) {
-            image_index = 1;
-        }
-    }
-    
-    if (point_distance(self.x+8, self.y, obj_player.x, self.y) &lt;= 4) {
-        if (y = ystart) {
-            gravity = 0.75;
-        }
-    }
-
-} else {
-}
-
-// mode sprites
-
-if (!gravity = 0) {
-    image_index = 2;
-    mode = 2;
-}
-
-if (vspeed &lt; 0) {
-    image_index = 0;
-    mode = 4;
-}
-
-// calculating the stopping points
-
-if (y &lt;= ystart) &amp;&amp; (mode == 4) {
+            <string>if (global.pause) {
     vspeed = 0;
-    y = ystart;
-    mode = 0;
+    gravity = 0;
+    hspeed = 0;
+    speed = 0;
+    image_speed = 0;
+    exit;
+
 }
 
-// limiting the speed
-
-if (vspeed &gt;= 2.5) {
-    vspeed = 2.5;
-}
-
-if (place_meeting(x, y+1, obj_collision)) {
-    if (mode = 2) {
-        if (ground == false) {
-            audio_play_sound(snd_press_ground, 5, false);
-            instance_create(x+8,y+18,obj_small_explosion);
-            instance_create(x+8,y+18,obj_small_explosion);
-            ground = true;
+if (distance_to_object(obj_player) &lt; 180) {
+    // image_speed
+    
+    image_speed = 0;
+    
+    if (y &lt; obj_player.y) {
+    
+        // which side are we looking at
+        /*
+        if (x &gt; obj_player.x) {
+            image_xscale = 1;
+        } else {
+            image_xscale = -1;
         }
-        mode = 3;
-        gravity = 0;
-        alarm[0] = 30;
-        view_yview = random_range(-8, 8);
+        */
+        
+        // calculate the distance
+        
+        if (point_distance(self.x+8, self.y, obj_player.x, self.y) &gt;= 36) {
+            if (y = ystart) {
+                image_index = 0;
+            }
+        }
+        
+        if (point_distance(self.x+8, self.y, obj_player.x, self.y) &lt; 36) {
+            if (y = ystart) {
+                image_index = 1;
+            }
+        }
+        
+        if (point_distance(self.x+8, self.y, obj_player.x, self.y) &lt;= 4) {
+            if (y = ystart) {
+                gravity = 0.75;
+            }
+        }
+    
+    } else {
+    }
+    
+    // mode sprites
+    
+    if (!gravity = 0) {
+        image_index = 2;
+        mode = 2;
+    }
+    
+    if (vspeed &lt; 0) {
+        image_index = 0;
+        mode = 4;
+    }
+    
+    // calculating the stopping points
+    
+    if (y &lt;= ystart) &amp;&amp; (mode == 4) {
         vspeed = 0;
+        y = ystart;
+        mode = 0;
+    }
+    
+    // limiting the speed
+    
+    if (vspeed &gt;= 2.5) {
+        vspeed = 2.5;
+    }
+    
+    if (place_meeting(x, y+1, obj_collision)) {
+        if (mode = 2) {
+            if (ground == false) {
+                audio_play_sound(snd_press_ground, 5, false);
+                instance_create(x+8,y+18,obj_small_explosion);
+                instance_create(x+8,y+18,obj_small_explosion);
+                ground = true;
+            }
+            mode = 3;
+            gravity = 0;
+            alarm[0] = 30;
+            view_yview = random_range(-8, 8);
+            vspeed = 0;
+        }
     }
 }
 </string>

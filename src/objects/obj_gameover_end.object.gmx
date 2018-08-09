@@ -55,6 +55,8 @@ go_snd = false
 
 if (timer &gt;= 300) {
     game_restart();
+    //global.title = false;
+    //room_goto(rm_opening_transition);
 }
 
 if (go_snd == false) {

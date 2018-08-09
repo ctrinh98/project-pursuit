@@ -98,59 +98,63 @@ yy = y;
           <argument>
             <kind>1</kind>
             <string>if (global.pause) {
-
-exit;
-
-} else {
-
-image_speed = 0.4;
-
-//Face the player's direction
-x_direction = sign(x - obj_player.x | 1);
-//image_xscale = sign(x - obj_player.x | 1);
-
-if (attack == true) {
-    hspeed = 0.4;
-} else {
+    
     hspeed = 0;
-}
+    image_speed = 0;
+    vspeed = 0;
+    exit;
 
-if (distance_to_object(obj_player) &lt; 180) {
-    rest = false;
-    attack = true;
-}
+} else {
 
-
-if (attack == true) {
-
-    t = (t + increment) mod 360;
-    shift = amplitude * 0.25 * dsin(t);
-     
-    //clone the movement from the object's speed and direction
-    xx += hspeed;
-    yy += vspeed;
-     
-    //apply the shift
-    x = xx + lengthdir_x(shift, direction + 90);
-    y = yy + lengthdir_y(shift, direction + 90);
-
-}
-
-//Look for a projectile
-incoming_bullet = instance_place(x,y,obj_bullet);
-
-if (instance_exists(incoming_bullet) &amp;&amp; enemy_hp == 1) {
-    with incoming_bullet { 
-        instance_destroy(); 
+    image_speed = 0.4;
+    
+    //Face the player's direction
+    x_direction = sign(x - obj_player.x | 1);
+    //image_xscale = sign(x - obj_player.x | 1);
+    
+    if (attack == true) {
+        hspeed = 0.4;
+    } else {
+        hspeed = 0;
     }
-    audio_play_sound(snd_enemy_explode,5,false);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_small_explosion);
-    instance_create(x,y,obj_battery_small);
-    instance_create(x,y,obj_battery_small);
-    instance_create(x,y,obj_big_explosion);
-    instance_destroy();
-}
+    
+    if (distance_to_object(obj_player) &lt; 180) {
+        rest = false;
+        attack = true;
+    }
+    
+    
+    if (attack == true) {
+    
+        t = (t + increment) mod 360;
+        shift = amplitude * 0.25 * dsin(t);
+         
+        //clone the movement from the object's speed and direction
+        xx += hspeed;
+        yy += vspeed;
+         
+        //apply the shift
+        x = xx + lengthdir_x(shift, direction + 90);
+        y = yy + lengthdir_y(shift, direction + 90);
+    
+    }
+    
+    //Look for a projectile
+    incoming_bullet = instance_place(x,y,obj_bullet);
+    
+    if (instance_exists(incoming_bullet) &amp;&amp; enemy_hp == 1) {
+        with incoming_bullet { 
+            instance_destroy(); 
+        }
+        global.gamescore += 100;
+        audio_play_sound(snd_enemy_explode,5,false);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_small_explosion);
+        instance_create(x,y,obj_battery_small);
+        instance_create(x,y,obj_battery_small);
+        instance_create(x,y,obj_big_explosion);
+        instance_destroy();
+    }
 
 } // global pause
 </string>

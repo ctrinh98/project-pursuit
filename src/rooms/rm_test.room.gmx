@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>//global.bgm = audio_play_sound(bgm_labyrinth_fight, 1, true);
+  <code>audio_master_gain(1);
+//global.bgm = audio_play_sound(bgm_labyrinth_fight, 1, true);
 global.static = audio_play_sound(bgm_static, 1, true);
 audio_sound_gain(global.static, 0.0, 0);
 //sound_volume(global.static, 0);</code>

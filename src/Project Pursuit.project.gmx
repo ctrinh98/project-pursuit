@@ -37,6 +37,10 @@
     <sound>sound\snd_results_ok</sound>
     <sound>sound\bgm_results_ok</sound>
     <sound>sound\snd_press_ground</sound>
+    <sound>sound\bgm_results_try_again</sound>
+    <sound>sound\bgm_results_superb</sound>
+    <sound>sound\snd_results_superb</sound>
+    <sound>sound\snd_results_try_again</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="spr_player">
@@ -143,6 +147,9 @@
       <sprite>sprites\spr_results_just_ok</sprite>
       <sprite>sprites\spr_results_just_ok_icon</sprite>
       <sprite>sprites\spr_results_superb</sprite>
+      <sprite>sprites\spr_results_ok_icon</sprite>
+      <sprite>sprites\spr_results_try_again_icon</sprite>
+      <sprite>sprites\spr_results_superb_icon</sprite>
     </sprites>
     <sprites name="spr_gameover">
       <sprite>sprites\spr_static</sprite>
@@ -155,6 +162,7 @@
       <sprite>sprites\spr_menu_options</sprite>
       <sprite>sprites\spr_title</sprite>
       <sprite>sprites\spr_title_options</sprite>
+      <sprite>sprites\sprite134</sprite>
       <sprite>sprites\spr_title_arrow_0</sprite>
       <sprite>sprites\spr_title_arrow_1</sprite>
       <sprite>sprites\spr_title_arrow_2</sprite>
@@ -193,6 +201,7 @@
     <sprite>sprites\spr_options_select_21</sprite>
     <sprite>sprites\spr_options_select_30</sprite>
     <sprite>sprites\spr_options_select_31</sprite>
+    <sprite>sprites\spr_howtoplay</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_start_point</background>
@@ -292,6 +301,9 @@
       <object>objects\obj_results_just_ok</object>
       <object>objects\obj_results_superb</object>
       <object>objects\obj_results_just_ok_icon</object>
+      <object>objects\obj_results_ok_icon</object>
+      <object>objects\obj_results_try_again_icon</object>
+      <object>objects\obj_results_superb_icon</object>
     </objects>
     <objects name="obj_title">
       <object>objects\obj_title_static</object>
@@ -347,6 +359,7 @@
     <object>objects\obj_hud_fix_cover</object>
     <object>objects\obj_highscores</object>
     <object>objects\obj_send_in</object>
+    <object>objects\obj_howtoplay</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
@@ -356,9 +369,10 @@
     <room>rooms\rm_title_transition</room>
     <room>rooms\rm_last_cave</room>
     <room>rooms\rm_results</room>
+    <room>rooms\room12</room>
     <room>rooms\rm_last_cave_og</room>
-    <room>rooms\rm_last_cave_beta</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_last_cave_beta</room>
     <room>rooms\rm_title_beta</room>
     <room>rooms\rm_title_old</room>
   </rooms>

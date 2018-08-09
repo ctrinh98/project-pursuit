@@ -57,32 +57,156 @@ c6 = false;
             <kind>1</kind>
             <string>timer ++;
 
-if (timer &gt;= 50) &amp;&amp; (c0 == false) {
-    audio_play_sound(snd_results_base, 5, false);
-    instance_create(0,0,obj_results_base);
-    c0 = true;
-}
+if (global.gamescore &lt; 4000) &amp;&amp; (global.battery &lt; 50) {
 
-if (timer &gt;= 120) &amp;&amp; (c3 == false) {
-    audio_play_sound(snd_results_statement, 5, false);
-    instance_create(0,0,obj_results_just_ok)
-    c3 = true;
-}
+    if (timer &gt;= 50) &amp;&amp; (c0 == false) {
+        audio_play_sound(snd_results_base, 5, false);
+        instance_create(0,0,obj_results_base);
+        c0 = true;
+    }
+    
+    if (timer &gt;= 120) &amp;&amp; (c3 == false) {
+        audio_play_sound(snd_results_statement, 5, false);
+        instance_create(0,0,obj_results_try_again)
+        c3 = true;
+    }
+    
+    if (timer &gt;= 240) &amp;&amp; (c4 == false) {
+        audio_play_sound(snd_results_try_again, 5, false);
+        instance_create(0,0,obj_results_try_again_icon)
+        c4 = true;
+    }
+    
+    if (timer &gt;= 300) &amp;&amp; (c5 == false) {
+        audio_play_sound(bgm_results_try_again, 5, false);
+        c5 = true;
+    }
+    
+    if (timer &gt;= 350) &amp;&amp; (c6 == false) {
+        instance_create(153,197,obj_zkey);
+        c6 = true;
+    }
+    
+} else if ((global.gamescore &gt; 5000) &amp;&amp; (global.battery &lt; 50)) || ((global.gamescore &gt; 4000) &amp;&amp; (global.battery &gt; 50)) {
 
-if (timer &gt;= 240) &amp;&amp; (c4 == false) {
-    audio_play_sound(snd_results_ok, 5, false);
-    instance_create(0,0,obj_results_just_ok_icon)
-    c4 = true;
-}
+    if (timer &gt;= 50) &amp;&amp; (c0 == false) {
+        audio_play_sound(snd_results_base, 5, false);
+        instance_create(0,0,obj_results_base);
+        c0 = true;
+    }
+    
+    if (timer &gt;= 120) &amp;&amp; (c3 == false) {
+        audio_play_sound(snd_results_statement, 5, false);
+        instance_create(0,0,obj_results_ok)
+        c3 = true;
+    }
+    
+    if (timer &gt;= 240) &amp;&amp; (c4 == false) {
+        audio_play_sound(snd_results_ok, 5, false);
+        instance_create(0,0,obj_results_ok_icon)
+        c4 = true;
+    }
+    
+    if (timer &gt;= 270) &amp;&amp; (c5 == false) {
+        audio_play_sound(bgm_results_ok, 5, false);
+        c5 = true;
+    }
+    
+    if (timer &gt;= 350) &amp;&amp; (c6 == false) {
+        instance_create(153,197,obj_zkey);
+        c6 = true;
+    }
 
-if (timer &gt;= 270) &amp;&amp; (c5 == false) {
-    audio_play_sound(bgm_results_ok, 5, false);
-    c5 = true;
-}
+} else if ((global.gamescore &gt; 7000) &amp;&amp; (global.battery &gt; 50)) {
 
-if (timer &gt;= 350) &amp;&amp; (c6 == false) {
-    instance_create(153,197,obj_zkey);
-    c6 = true;
+    if (timer &gt;= 50) &amp;&amp; (c0 == false) {
+        audio_play_sound(snd_results_base, 5, false);
+        instance_create(0,0,obj_results_base);
+        c0 = true;
+    }
+    
+    if (timer &gt;= 120) &amp;&amp; (c3 == false) {
+        audio_play_sound(snd_results_statement, 5, false);
+        instance_create(0,0,obj_results_just_ok)
+        c3 = true;
+    }
+    
+    if (timer &gt;= 240) &amp;&amp; (c4 == false) {
+        audio_play_sound(snd_results_ok, 5, false);
+        instance_create(0,0,obj_results_just_ok_icon)
+        c4 = true;
+    }
+    
+    if (timer &gt;= 300) &amp;&amp; (c5 == false) {
+        audio_play_sound(bgm_results_ok, 5, false);
+        c5 = true;
+    }
+    
+    if (timer &gt;= 350) &amp;&amp; (c6 == false) {
+        instance_create(153,197,obj_zkey);
+        c6 = true;
+    }
+
+} else if (global.gamescore &gt;= 8000 &amp;&amp; global.gamescore &gt; 50) {
+
+    if (timer &gt;= 50) &amp;&amp; (c0 == false) {
+        audio_play_sound(snd_results_base, 5, false);
+        instance_create(0,0,obj_results_base);
+        c0 = true;
+    }
+    
+    if (timer &gt;= 120) &amp;&amp; (c3 == false) {
+        audio_play_sound(snd_results_statement, 5, false);
+        instance_create(0,0,obj_results_superb)
+        c3 = true;
+    }
+    
+    if (timer &gt;= 240) &amp;&amp; (c4 == false) {
+        audio_play_sound(snd_results_superb, 5, false);
+        instance_create(0,0,obj_results_superb_icon)
+        c4 = true;
+    }
+    
+    if (timer &gt;= 300) &amp;&amp; (c5 == false) {
+        audio_play_sound(bgm_results_superb, 5, false);
+        c5 = true;
+    }
+    
+    if (timer &gt;= 350) &amp;&amp; (c6 == false) {
+        instance_create(153,197,obj_zkey);
+        c6 = true;
+    }
+
+} else {
+
+    if (timer &gt;= 50) &amp;&amp; (c0 == false) {
+        audio_play_sound(snd_results_base, 5, false);
+        instance_create(0,0,obj_results_base);
+        c0 = true;
+    }
+    
+    if (timer &gt;= 120) &amp;&amp; (c3 == false) {
+        audio_play_sound(snd_results_statement, 5, false);
+        instance_create(0,0,obj_results_just_ok)
+        c3 = true;
+    }
+    
+    if (timer &gt;= 240) &amp;&amp; (c4 == false) {
+        audio_play_sound(snd_results_ok, 5, false);
+        instance_create(0,0,obj_results_just_ok_icon)
+        c4 = true;
+    }
+    
+    if (timer &gt;= 300) &amp;&amp; (c5 == false) {
+        audio_play_sound(bgm_results_ok, 5, false);
+        c5 = true;
+    }
+    
+    if (timer &gt;= 350) &amp;&amp; (c6 == false) {
+        instance_create(153,197,obj_zkey);
+        c6 = true;
+    }
+   
 }
 </string>
           </argument>
